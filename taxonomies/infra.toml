@@ -1,0 +1,38 @@
+[infra]
+
+[infra.provider]
+
+[[infra.provider.cloud]]
+name="aws"
+full_name="Amazon Web Services"
+owner="Amazon"
+
+[[infra.provider.cloud]]
+name="gcp"
+full_name="Google Cloud Platform"
+owner="Google"
+
+[[infra.provider.cloud]]
+name="azure"
+full_name="Azure"
+owner="Microsoft"
+
+[[infra.provider.cloud]]
+name="oci"
+full_name="Oracle Cloud Infrastructure"
+owner="Oracle"
+
+[[infra.provider.cloud]]
+name="DigitalOcean"
+full_name="Digital Ocean"
+owner="DigitalOcean Holdings"
+
+[[infra.provider.cloud]]
+name="heroku"
+full_name="Heroku"
+owner="Salesforce"
+
+[[infra.provider.bare_metal]]
+name="hetzner"
+full_name="Hetzner"
+owner="Hetzner Online GmbH"
