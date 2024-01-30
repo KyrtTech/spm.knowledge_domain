@@ -46,3 +46,8 @@ owner="ROMARG"
 name="localstack"
 full_name="LocalStack"
 owner="LocalStack"
+
+[[infra.provider.local]]
+name="minikube"
+full_name="minikube"
+owner="Kubernetes"
