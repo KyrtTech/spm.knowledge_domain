@@ -36,3 +36,13 @@ owner="Salesforce"
 name="hetzner"
 full_name="Hetzner"
 owner="Hetzner Online GmbH"
+
+[[infra.provider.bare_metal]]
+name="romarg"
+full_name="Romarg"
+owner="ROMARG"
+
+[[infra.provider.local]]
+name="localstack"
+full_name="LocalStack"
+owner="LocalStack"
