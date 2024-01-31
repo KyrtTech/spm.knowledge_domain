@@ -1,16 +1,13 @@
 [[os]]
-name="windows"
-created_by="Microsoft"
 
 [[os.linux]]
 name="amazonlinux"
 created_by="Amazon"
 
-[[os.linux]]
+[os.linux.debian]
 name="Debian"
 created_by="The Debian Project"
-
-[[os.linux.debian]]
+[os.linux.debian.ubuntu]
 name="Ubuntu"
 created_by="Canonical Ltd."
 
@@ -21,3 +18,7 @@ created_by="Apple"
 [[os]]
 name="chromeos"
 created_by="Google"
+
+[[os]]
+name="windows"
+created_by="Microsoft"
