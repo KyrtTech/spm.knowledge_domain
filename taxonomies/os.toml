@@ -1,0 +1,23 @@
+[[os]]
+name="windows"
+created_by="Microsoft"
+
+[[os.linux]]
+name="amazonlinux"
+created_by="Amazon"
+
+[[os.linux]]
+name="Debian"
+created_by="The Debian Project"
+
+[[os.linux.debian]]
+name="Ubuntu"
+created_by="Canonical Ltd."
+
+[[os]]
+name="macos"
+created_by="Apple"
+
+[[os]]
+name="chromeos"
+created_by="Google"
