@@ -1,0 +1,40 @@
+[package_manager]
+
+[[package_manager.with_lock_file]]
+
+[[package_manager.with_lock_file.with_audit]]
+name="npm"
+default_registry="npmjs.com"
+created_by="Isaac Schlueter"
+dep_file="package.json"
+lock_file="package-lock.json"
+
+[[package_manager.with_lock_file.with_audit]]
+name="yarn"
+default_registry="npmjs.com"
+created_by="Facebook"
+dep_file="package.json"
+lock_file="yarn.lock"
+
+[[package_manager.with_lock_file.no_audit]]
+name="pnpm"
+default_registry="npmjs.com"
+created_by="Zoltan Kochan"
+dep_file="package.json"
+lock_file="pnpm-lock.yaml"
+
+[[package_manager.with_lock_file.no_audit]]
+name="poetry"
+default_registry="pypi.org"
+created_by="Vercel"
+lock_file="pyproject.toml"
+
+[[package_manager.no_lock_file]]
+
+[[package_manager.no_lock_file.with_audit]]
+
+[[package_manager.no_lock_file.no_audit]]
+name="pip"
+default_registry="pypi.org"
+created_by="Ian Bicking"
+dep_file="requirements.txt"
