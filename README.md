@@ -42,3 +42,39 @@ We are using `.ttl` (turtle) files for vocabulary and ontology.
 
 ### JSON-LD
 You may also encounter `json-ld` files. The main rationale about using this is that other projects in the `spm` effort will expose API that use `json` as the protocol. Adding a context to a JSON file should be enough to provide data linking and allow for more richer and in depth analysis.
+
+## 3rd Party Vocabularies and Ontologies
+
+We rely on existing and widely used and accepted `vocabularies` and `ontologies` where this seems to be appropriate.
+
+This is a growing list of external resources that are used accross this project.
+
+### Dublin Core
+
+Dublin Core is one of the main source for the vocabularies and ontologies we are using.
+
+More precisely we are using the following namespaces
+- http://purl.org/dc/elements/1.1/
+- http://purl.org/dc/terms/
+- http://purl.org/dc/dcmitype/
+
+> Note: there are classes and properties that we aren't using from these namespaces.
+
+### Schema.org
+
+Where appropriate we use the vocabulary provided by [schema.org](https://schema.org/).
+
+Where SEO is a goal schema.org is preferred, most likely in conjuction with [microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata).
+
+### FriendOfAFriend (foaf)
+
+When describing creators, contributors or persons of interesest we mostly rely on [FoaF vocab](http://xmlns.com/foaf/spec/).
+
+### DataCatalogVocabulary (DCAT) - v2
+We aren't using DCAT actively at this point, but this is a good resource if you ever need to describe a `data catalog`.
+
+V2 recommendation can be found [here](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/).
+
+There is also a candidate recommendation for v3 [here](https://www.w3.org/TR/vocab-dcat-3/).
+
+> Note: this list is a living list and we may add other 3rd party vocabularies to it. 
