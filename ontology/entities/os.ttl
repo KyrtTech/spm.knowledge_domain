@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+# Windows
+spm:Windows10 a spm:OperatingSystem ;
+    dcterms:title "Windows 10"@en ;
+    spm:hasSemanticVersion "10.0" ;
+    spm:releaseDate "2015-07-29"^^xsd:date ;
+    spm:endOfLifeDate "2025-10-14"^^xsd:date ;
+    dcterms:creator "Microsoft" ;
+    foaf:homepage <https://www.microsoft.com/windows/get-windows-10> .
+
+spm:Windows11-21H2 a spm:OperatingSystem ;
+    dcterms:title "Windows 11"@en ;
+    spm:hasSemanticVersion "22000.194" ;
+    spm:releaseDate "2021-10-04"^^xsd:date ;
+    spm:endOfLifeDate "2024-10-08"^^xsd:date ;
+    dcterms:creator "Microsoft" ;
+    foaf:homepage <https://www.microsoft.com/windows/windows-11> .
+
+spm:Windows11-22H2 a spm:OperatingSystem ;
+    dcterms:title "Windows 11"@en ;
+    spm:hasSemanticVersion "22621.521" ;
+    spm:releaseDate "2022-09-20"^^xsd:date ;
+    spm:endOfLifeDate "2025-10-14"^^xsd:date ;
+    dcterms:creator "Microsoft" ;
+    foaf:homepage <https://www.microsoft.com/windows/windows-11> .
+
+spm:Windows11-23H2 a spm:OperatingSystem ;
+    dcterms:title "Windows 11"@en ;
+    spm:hasSemanticVersion "22631.2428" ;
+    spm:releaseDate "2023-10-31"^^xsd:date ;
+    spm:endOfLifeDate "2026-11-10"^^xsd:date ;
+    dcterms:creator "Microsoft" ;
+    foaf:homepage <https://www.microsoft.com/windows/windows-11> .
+
+# Ubuntu
+spm:Ubuntu2004LTS a spm:OperatingSystem ;
+    dcterms:title "Ubuntu 20.04 LTS"@en ;
+    dcterms:alternative "Focal Fossa"@en;
+    spm:hasSemanticVersion "20.04" ;
+    spm:releaseDate "2020-04-23"^^xsd:date ;
+    spm:endOfLifeDate "2025-04-23"^^xsd:date ;
+    dcterms:creator "Canonical" ;
+    foaf:homepage <https://releases.ubuntu.com/22.04/> .
+
+spm:Ubuntu2204LTS a spm:OperatingSystem ;
+    dcterms:title "Ubuntu 22.04 LTS"@en ;
+    dcterms:alternative "Jammy Jellyfish"@en;
+    spm:hasSemanticVersion "22.04" ;
+    spm:releaseDate "2022-04-21"^^xsd:date ;
+    spm:endOfLifeDate "2027-04-21"^^xsd:date ;
+    dcterms:creator "Canonical" ;
+    foaf:homepage <https://releases.ubuntu.com/22.04/> .
+
+spm:Ubuntu2304 a spm:OperatingSystem ;
+    dcterms:title "Ubuntu 23.04"@en ;
+    dcterms:alternative "Lunar Lobster"@en ;
+    spm:hasSemanticVersion "23.04" ;
+    spm:releaseDate "2023-04-20"^^xsd:date ;
+    spm:endOfLifeDate "2024-01-25"^^xsd:date ;
+    dcterms:creator "Canonical" ;
+    foaf:homepage <https://releases.ubuntu.com/23.04/> .
+
+spm:Ubuntu2310 a spm:OperatingSystem ;
+    dcterms:title "Ubuntu 23.10"@en ;
+    dcterms:alternative "Mantic Minotaur"@en ;
+    spm:hasSemanticVersion "23.10" ;
+    spm:releaseDate "2023-10-12"^^xsd:date ;
+    spm:endOfLifeDate "2024-07-01"^^xsd:date ;
+    dcterms:creator "Canonical" ;
+    foaf:homepage <https://releases.ubuntu.com/23.10/> .
+
+# macOS
+spm:macOSMonterey a spm:OperatingSystem ;
+    dcterms:title "macOS Monterey"@en ;
+    spm:hasSemanticVersion "12.0"@en ;
+    spm:releaseDate "2021-10-25"^^xsd:date ;
+    dcterms:creator "Apple Inc." ;
+    foaf:homepage <https://www.apple.com/macos/monterey/> .

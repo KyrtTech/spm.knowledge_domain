@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+# npm
+spm:npm8 a spm:PackageManager ;
+    dcterms:title "npm 8" ;
+    spm:hasSemanticVersion "8.19.4" ;
+    spm:isUsedForPlatform spm:NodeJS16 ;
+    spm:defaultRegistry <https://registry.npmjs.org/> ;
+    spm:lockFileName "package-lock.json" ;
+    spm:dependencyFileName "package.json" ;
+    spm:minimumPlatformVersion "16.20.2" ;
+    dcterms:creator "npm, Inc." ;
+    foaf:homepage <https://npmjs.com/> .
+
+spm:npm10 a spm:PackageManager ;
+    dcterms:title "npm 10" ;
+    spm:hasSemanticVersion "10.2.3" ;
+    spm:isUsedForPlatform spm:NodeJS18 ;
+    spm:isUsedForPlatform spm:NodeJS20 ;
+    spm:defaultRegistry <https://registry.npmjs.org/> ;
+    spm:lockFileName "package-lock.json" ;
+    spm:dependencyFileName "package.json" ;
+    spm:minimumPlatformVersion "18.19.0" ;
+    dcterms:creator "npm, Inc." ;
+    foaf:homepage <https://npmjs.com/> .
