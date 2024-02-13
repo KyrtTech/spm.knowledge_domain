@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+# Class that inherits from schema:SoftwareApplication
+spm:SemanticVersioningApplication a rdfs:Class ;
+    rdfs:subClassOf schema:SoftwareApplication .
+
+# Property to represent semantic versioning
+spm:hasSemanticVersion a rdf:Property ;
+    rdfs:label "Semantic Version" ;
+    rdfs:comment "A property to represent a software's version according to Semantic Versioning 2.0.0" ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range xsd:string .
+
+spm:creator a rdf:Property ;
+    rdfs:label "Creator" ;
+    rdfs:comment "The individual, team, or organization responsible for creating the application." ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range foaf:Agent .
+
+# Extending SemanticVersioningApplication with a release date property
+spm:releaseDate a rdf:Property ;
+    rdfs:label "Release Date" ;
+    rdfs:comment "The release date of the software version." ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range xsd:date .
+
+# Property for End of Life (EOL) date
+spm:endOfLifeDate a rdf:Property ;
+    rdfs:label "End of Life Date" ;
+    rdfs:comment "The date on which the software version is considered to be at the end of its life." ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range xsd:date .
+
+# DevelopmentPlatform
+spm:DevelopmentPlatform a rdfs:Class ;
+    rdfs:subClassOf spm:SemanticVersioningApplication ;
+    rdfs:label "Development Platform" ;
+    rdfs:comment "A software application that provides development tools and environments." .
+
+# OperatingSystem
+spm:OperatingSystem a rdfs:Class ;
+    rdfs:subClassOf spm:SemanticVersioningApplication ;
+    rdfs:label "Operating System" ;
+    rdfs:comment "An operating system that serves as the foundational software that manages computer hardware and software resources and provides common services for computer programs." .
+
+spm:dependsOn a rdf:Property ;
+    rdfs:domain spm:DevelopmentPlatform ;
+    rdfs:range spm:OperatingSystem .
+
+
+# Define PackageManager as a subclass of SemanticSoftwareApplication
+spm:PackageManager a rdfs:Class ;
+    rdfs:subClassOf spm:SemanticSoftwareApplication ;
+    rdfs:comment "A package manager is a programming language's tool to create project environments and easily import external dependencies." .
+
+# Property for default registry URL
+spm:defaultRegistry a rdf:Property ;
+    rdfs:domain spm:PackageManager ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The default registry URL where packages are stored and managed." .
+
+# Property for lock file name
+spm:lockFileName a rdf:Property ;
+    rdfs:domain spm:PackageManager ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The conventional name for the lock file used by the package manager." .
+
+# Property for dependency file name
+spm:dependencyFileName a rdf:Property ;
+    rdfs:domain spm:PackageManager ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the file that lists the dependencies for projects using this package manager." .
+
+# Property to link PackageManager to DevelopmentPlatform
+spm:isUsedForPlatform a rdf:Property ;
+    rdfs:domain spm:PackageManager ;
+    rdfs:range spm:DevelopmentPlatform ;
+    rdfs:comment "Associates a package manager with the development platform it is used for." .
