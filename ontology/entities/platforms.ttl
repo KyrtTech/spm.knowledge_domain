@@ -5,8 +5,10 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
+@prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
+
 # NodeJS
-spm:NodeJS16 a spm:DevelopmentPlatform ;
+spm_platforms:NodeJS16 a spm:DevelopmentPlatform ;
     dcterms:title "Node.js 16"@en ;
     schema:alternateName "Gallium"@en ;
     spm:hasSemanticVersion "16.0.0" ;
@@ -15,16 +17,16 @@ spm:NodeJS16 a spm:DevelopmentPlatform ;
     dcterms:creator "OpenJS Foundation" ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .
 
-spm:NodeJS18 a spm:DevelopmentPlatform ;
-    dcterms:title "Node.js 18" ;
-    schema:alternateName "Hydrogen" ;
+spm_platforms:NodeJS18 a spm:DevelopmentPlatform ;
+    dcterms:title "Node.js 18"@en ;
+    schema:alternateName "Hydrogen"@en ;
     spm:hasSemanticVersion "18.19.0" ;
     spm:releaseDate "2023-11-29"^^xsd:date ;
     spm:endOfLifeDate "2025-04-30"^^xsd:date ;
     dcterms:creator "OpenJS Foundation" ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .
 
-spm:NodeJS20 a spm:DevelopmentPlatform ;
+spm_platforms:NodeJS20 a spm:DevelopmentPlatform ;
     dcterms:title "Node.js 20"@en ;
     schema:alternateName "Iron"@en ;
     spm:hasSemanticVersion "20.11.0" ;

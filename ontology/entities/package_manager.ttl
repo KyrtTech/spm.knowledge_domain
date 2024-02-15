@@ -6,11 +6,14 @@
 @prefix schema: <http://schema.org/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
+@prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
+@prefix spm_package_managers: <http://the-spm.org/entities/package_managers/> .
+
 # npm
-spm:npm8 a spm:PackageManager ;
+spm_package_managers:npm8 a spm:PackageManager ;
     dcterms:title "npm 8" ;
     spm:hasSemanticVersion "8.19.4" ;
-    spm:isUsedForPlatform spm:NodeJS16 ;
+    spm:isUsedForPlatform spm_platforms:NodeJS16 ;
     spm:defaultRegistry <https://registry.npmjs.org/> ;
     spm:lockFileName "package-lock.json" ;
     spm:dependencyFileName "package.json" ;
@@ -18,11 +21,11 @@ spm:npm8 a spm:PackageManager ;
     dcterms:creator "npm, Inc." ;
     foaf:homepage <https://npmjs.com/> .
 
-spm:npm10 a spm:PackageManager ;
+spm_package_managers:npm10 a spm:PackageManager ;
     dcterms:title "npm 10" ;
     spm:hasSemanticVersion "10.2.3" ;
-    spm:isUsedForPlatform spm:NodeJS18 ;
-    spm:isUsedForPlatform spm:NodeJS20 ;
+    spm:isUsedForPlatform spm_platforms:NodeJS18 ;
+    spm:isUsedForPlatform spm_platforms:NodeJS20 ;
     spm:defaultRegistry <https://registry.npmjs.org/> ;
     spm:lockFileName "package-lock.json" ;
     spm:dependencyFileName "package.json" ;
