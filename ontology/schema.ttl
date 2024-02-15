@@ -37,22 +37,30 @@ spm:endOfLifeDate a rdf:Property ;
     rdfs:domain spm:SemanticVersioningApplication ;
     rdfs:range xsd:date .
 
-# DevelopmentPlatform
-spm:DevelopmentPlatform a rdfs:Class ;
-    rdfs:subClassOf spm:SemanticVersioningApplication ;
-    rdfs:label "Development Platform" ;
-    rdfs:comment "A software application that provides development tools and environments." .
-
 # OperatingSystem
 spm:OperatingSystem a rdfs:Class ;
     rdfs:subClassOf spm:SemanticVersioningApplication ;
     rdfs:label "Operating System" ;
     rdfs:comment "An operating system that serves as the foundational software that manages computer hardware and software resources and provides common services for computer programs." .
 
+# DevelopmentPlatformFamily
+spm:DevelopmentPlatformFamily a rdfs:Class ;
+    rdfs:label "Development Platform Family" ;
+    rdfs:comment "A family of Dev Platform. This is a way of grouping and addressing a development platform ignoring the versions and allowing of each version to have different properties" .
+
+# DevelopmentPlatform
+spm:DevelopmentPlatform a rdfs:Class ;
+    rdfs:subClassOf spm:SemanticVersioningApplication ;
+    rdfs:label "Development Platform" ;
+    rdfs:comment "A software application that provides development tools and environments." .
+
 spm:dependsOn a rdf:Property ;
     rdfs:domain spm:DevelopmentPlatform ;
     rdfs:range spm:OperatingSystem .
 
+spm:belongsToFamily a rdf:Property ;
+    rdfs:domain spm:DevelopmentPlatform ;
+    rdfs:range spm:DevelopmentPlatformFamily .
 
 # Define PackageManager as a subclass of SemanticSoftwareApplication
 spm:PackageManager a rdfs:Class ;
