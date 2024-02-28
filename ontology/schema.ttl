@@ -90,3 +90,22 @@ spm:isUsedForPlatform a rdf:Property ;
     rdfs:domain spm:PackageManager ;
     rdfs:range spm:DevelopmentPlatform ;
     rdfs:comment "Associates a package manager with the development platform it is used for." .
+
+
+# CloudProviderServices class
+spm:CloudServiceType a rdfs:Class .
+
+# CloudProvider class
+spm:CloudProvider a rdfs:Class .
+
+spm:hasName a rdf:Property ;
+    rdfs:domain spm:CloudProvider ;
+    rdfs:range xsd:string .
+
+spm:offersService a rdf:Property ;
+    rdfs:domain spm:CloudProvider ;
+    rdfs:range spm:CloudServiceType .
+
+spm:operatesInRegion a rdf:Property ;
+    rdfs:domain spm:CloudProvider ;
+    rdfs:range xsd:string .

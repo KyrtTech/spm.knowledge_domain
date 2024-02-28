@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services/> .
+
+# Specific Cloud Services as instances of CloudServiceType
+spm_cloud_service:ComputeService a spm:CloudServiceType ;
+    dcterms:title "Compute Service" ;
+    dcterms:description "Services that provide virtualized computing resources over the internet." .
+
+spm_cloud_service:StorageService a spm:CloudServiceType ;
+    dcterms:title "Storage Service" ;
+    dcterms:description "Cloud-based services for storing and managing data." .
+
+spm_cloud_service:DatabaseService a spm:CloudServiceType ;
+    dcterms:title "Database Service" ;
+    dcterms:description "Fully managed database services to operate and scale a relational database in the cloud." .
+
+spm_cloud_service:MachineLearningService a spm:CloudServiceType ;
+    dcterms:title "Machine Learning Service" ;
+    dcterms:description "Cloud services that offer machine learning and artificial intelligence capabilities." .
+
+spm_cloud_service:CDN a spm:CloudServiceType ;
+    dcterms:title "CDN Service" ;
+    dcterms:description "A distributed network of servers that efficiently delivers web content and services to users based on their geographic location." .
