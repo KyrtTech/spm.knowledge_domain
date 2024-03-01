@@ -37,11 +37,22 @@ spm:endOfLifeDate a rdf:Property ;
     rdfs:domain spm:SemanticVersioningApplication ;
     rdfs:range xsd:date .
 
+# Class for Operating System Family
+spm:OperatingSystemFamily a rdfs:Class ;
+    rdfs:label "Operating System Family" ;
+    rdfs:comment "A class representing families of operating systems." .
+
 # OperatingSystem
 spm:OperatingSystem a rdfs:Class ;
     rdfs:subClassOf spm:SemanticVersioningApplication ;
     rdfs:label "Operating System" ;
     rdfs:comment "An operating system that serves as the foundational software that manages computer hardware and software resources and provides common services for computer programs." .
+
+# Property linking Operating System to its Family
+spm:belongsToFamily a rdf:Property ;
+    rdfs:domain spm:OperatingSystem ;  # Assuming spm:OperatingSystem is already defined
+    rdfs:range spm:OperatingSystemFamily ;
+    rdfs:comment "Indicates the family to which the operating system belongs." .
 
 # DevelopmentPlatformFamily
 spm:DevelopmentPlatformFamily a rdfs:Class ;

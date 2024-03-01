@@ -5,6 +5,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
+@prefix spm_os_family: <http://the-spm.org/entities/os_family/> .
+
 # Windows
 spm:Windows10 a spm:OperatingSystem ;
     dcterms:title "Windows 10"@en ;
@@ -12,6 +14,7 @@ spm:Windows10 a spm:OperatingSystem ;
     spm:releaseDate "2015-07-29"^^xsd:date ;
     spm:endOfLifeDate "2025-10-14"^^xsd:date ;
     dcterms:creator "Microsoft" ;
+    spm:belongsToFamily spm_os_family:WindowsFamily ;
     foaf:homepage <https://www.microsoft.com/windows/get-windows-10> .
 
 spm:Windows11-21H2 a spm:OperatingSystem ;
@@ -20,6 +23,7 @@ spm:Windows11-21H2 a spm:OperatingSystem ;
     spm:releaseDate "2021-10-04"^^xsd:date ;
     spm:endOfLifeDate "2024-10-08"^^xsd:date ;
     dcterms:creator "Microsoft" ;
+    spm:belongsToFamily spm_os_family:WindowsFamily ;
     foaf:homepage <https://www.microsoft.com/windows/windows-11> .
 
 spm:Windows11-22H2 a spm:OperatingSystem ;
@@ -28,6 +32,7 @@ spm:Windows11-22H2 a spm:OperatingSystem ;
     spm:releaseDate "2022-09-20"^^xsd:date ;
     spm:endOfLifeDate "2025-10-14"^^xsd:date ;
     dcterms:creator "Microsoft" ;
+    spm:belongsToFamily spm_os_family:WindowsFamily ;
     foaf:homepage <https://www.microsoft.com/windows/windows-11> .
 
 spm:Windows11-23H2 a spm:OperatingSystem ;
@@ -36,6 +41,7 @@ spm:Windows11-23H2 a spm:OperatingSystem ;
     spm:releaseDate "2023-10-31"^^xsd:date ;
     spm:endOfLifeDate "2026-11-10"^^xsd:date ;
     dcterms:creator "Microsoft" ;
+    spm:belongsToFamily spm_os_family:WindowsFamily ;
     foaf:homepage <https://www.microsoft.com/windows/windows-11> .
 
 # Ubuntu
@@ -46,6 +52,7 @@ spm:Ubuntu2004LTS a spm:OperatingSystem ;
     spm:releaseDate "2020-04-23"^^xsd:date ;
     spm:endOfLifeDate "2025-04-23"^^xsd:date ;
     dcterms:creator "Canonical" ;
+    spm:belongsToFamily spm_os_family:UnixLike ;
     foaf:homepage <https://releases.ubuntu.com/22.04/> .
 
 spm:Ubuntu2204LTS a spm:OperatingSystem ;
@@ -55,6 +62,7 @@ spm:Ubuntu2204LTS a spm:OperatingSystem ;
     spm:releaseDate "2022-04-21"^^xsd:date ;
     spm:endOfLifeDate "2027-04-21"^^xsd:date ;
     dcterms:creator "Canonical" ;
+    spm:belongsToFamily spm_os_family:UnixLike ;
     foaf:homepage <https://releases.ubuntu.com/22.04/> .
 
 spm:Ubuntu2304 a spm:OperatingSystem ;
@@ -64,6 +72,7 @@ spm:Ubuntu2304 a spm:OperatingSystem ;
     spm:releaseDate "2023-04-20"^^xsd:date ;
     spm:endOfLifeDate "2024-01-25"^^xsd:date ;
     dcterms:creator "Canonical" ;
+    spm:belongsToFamily spm_os_family:UnixLike ;
     foaf:homepage <https://releases.ubuntu.com/23.04/> .
 
 spm:Ubuntu2310 a spm:OperatingSystem ;
@@ -73,6 +82,7 @@ spm:Ubuntu2310 a spm:OperatingSystem ;
     spm:releaseDate "2023-10-12"^^xsd:date ;
     spm:endOfLifeDate "2024-07-01"^^xsd:date ;
     dcterms:creator "Canonical" ;
+    spm:belongsToFamily spm_os_family:UnixLike ;
     foaf:homepage <https://releases.ubuntu.com/23.10/> .
 
 # macOS
@@ -81,4 +91,5 @@ spm:macOSMonterey a spm:OperatingSystem ;
     spm:hasSemanticVersion "12.0"@en ;
     spm:releaseDate "2021-10-25"^^xsd:date ;
     dcterms:creator "Apple Inc." ;
+    spm:belongsToFamily spm_os_family:MacOSFamily ;
     foaf:homepage <https://www.apple.com/macos/monterey/> .

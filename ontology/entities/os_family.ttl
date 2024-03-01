@@ -1,0 +1,14 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_os_family: <http://the-spm.org/entities/os_family/> .
+
+# Operating System Families
+spm_os_family:UnixLike a spm:OperatingSystemFamily ;
+    dcterms:title "Unix-like" .
+
+spm_os_family:WindowsFamily a spm:OperatingSystemFamily ;
+    dcterms:title "Windows" .
+
+spm_os_family:MacOSFamily a spm:OperatingSystemFamily ;
+    dcterms:title "MacOS" .
