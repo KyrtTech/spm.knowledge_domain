@@ -73,9 +73,9 @@ spm:belongsToFamily a rdf:Property ;
     rdfs:domain spm:DevelopmentPlatform ;
     rdfs:range spm:DevelopmentPlatformFamily .
 
-# Define PackageManager as a subclass of SemanticSoftwareApplication
+# Define PackageManager as a subclass of SemanticVersioningApplication
 spm:PackageManager a rdfs:Class ;
-    rdfs:subClassOf spm:SemanticSoftwareApplication ;
+    rdfs:subClassOf spm:SemanticVersioningApplication ;
     rdfs:comment "A package manager is a programming language's tool to create project environments and easily import external dependencies." .
 
 # Property for default registry URL
