@@ -178,3 +178,26 @@ spm:hasConfigParam a rdf:Property ;
     rdfs:domain spm:InstallStrategy ;
     rdfs:range spm:ConfigParam ;
     rdfs:comment "A configuration parameter required by the install strategy." .
+
+# Define SoftwareService as a subclass of SemanticVersioningApplication
+spm:SoftwareService a rdfs:Class ;
+    rdfs:subClassOf spm:SemanticVersioningApplication ;
+    rdfs:comment "A software service that may depend on specific development platforms, configuration parameters, and other software services." .
+
+# Property for linking SoftwareService to ConfigParams
+spm:serviceHasConfigParam a rdf:Property ;
+    rdfs:domain spm:SoftwareService ;
+    rdfs:range spm:ConfigParam ;
+    rdfs:comment "A configuration parameter required by the software service." .
+
+# Property indicating dependencies on other SoftwareServices
+spm:dependsOnService a rdf:Property ;
+    rdfs:domain spm:SoftwareService ;
+    rdfs:range spm:SoftwareService ;
+    rdfs:comment "Indicates a dependency of this software service on another software service." .
+
+# Property indicating the download URL for a SoftwareService
+spm:downloadURL a rdf:Property ;
+    rdfs:domain spm:SoftwareService ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "A URL from where the software service can be downloaded." .
