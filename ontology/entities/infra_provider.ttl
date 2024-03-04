@@ -13,7 +13,13 @@ spm_infra_providers:Docker a spm:InfrastructureProvider ;
     foaf:homepage <https://www.docker.com/> .
 
 # LocalStack as an instance of InfrastructureProvider
-spm:LocalStack a spm:InfrastructureProvider ;
+spm_infra_providers:LocalStack a spm:InfrastructureProvider ;
     dcterms:title "LocalStack" ;
     dcterms:description "LocalStack provides a fully functional local AWS cloud stack, allowing for cloud and serverless application development and testing in a local environment." ;
     foaf:homepage <https://localstack.cloud/> .
+
+# Define Localhost as an InfrastructureProvider
+spm_infra_providers:Localhost a spm:InfrastructureProvider ;
+    dcterms:title "Localhost" ;
+    dcterms:description "Represents the local development environment on a developer's machine, used for development, testing, and local deployments." ;
+    foaf:homepage <http://localhost/> .
