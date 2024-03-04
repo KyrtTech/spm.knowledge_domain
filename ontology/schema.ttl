@@ -106,8 +106,16 @@ spm:isUsedForPlatform a rdf:Property ;
 # CloudProviderServices class
 spm:CloudServiceType a rdfs:Class .
 
+
+# Class for Infrastructure Provider
+spm:InfrastructureProvider a rdfs:Class ;
+    rdfs:comment "An entity that provides the physical or virtual infrastructure for deploying software applications." .
+
 # CloudProvider class
-spm:CloudProvider a rdfs:Class .
+spm:CloudProvider a rdfs:Class ;
+    rdfs:subClassOf spm:InfrastructureProvider ;
+    rdfs:label "Cloud Provider" ;
+    rdfs:comment "A provider of cloud-based infrastructure services, offering scalable and flexible computing resources over the internet." .
 
 spm:hasName a rdf:Property ;
     rdfs:domain spm:CloudProvider ;
