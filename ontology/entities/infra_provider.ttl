@@ -1,0 +1,19 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_infra_providers: <http://the-spm.org/entities/infra_providers/> .
+
+# Docker as an instance of InfrastructureProvider
+spm_infra_providers:Docker a spm:InfrastructureProvider ;
+    dcterms:title "Docker" ;
+    dcterms:description "Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers." ;
+    foaf:homepage <https://www.docker.com/> .
+
+# LocalStack as an instance of InfrastructureProvider
+spm:LocalStack a spm:InfrastructureProvider ;
+    dcterms:title "LocalStack" ;
+    dcterms:description "LocalStack provides a fully functional local AWS cloud stack, allowing for cloud and serverless application development and testing in a local environment." ;
+    foaf:homepage <https://localstack.cloud/> .
