@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_params: <http://the-spm.org/entities/params/> .
+
+# Instances of Parameter
+
+spm_params:env a spm:Parameter ;
+    spm:paramName "env" ;
+    spm:defaultValue "production" ;
+    spm:paramDescription "Environment type (e.g., development, staging, production)." .
+
+spm_params:maxThreads a spm:Parameter ;
+    spm:paramName "maxThreads" ;
+    spm:defaultValue "4" ;
+    spm:paramDescription "Maximum number of threads." .
+
+spm_params:sshKeyAsString a spm:Parameter ;
+    spm:paramName "sshKeyAsString" ;
+    spm:defaultValue "ssh-rsa AAAA..." ;
+    spm:paramDescription "SSH string for secure connections." .
+
+spm_params:sshKey a spm:Parameter ;
+    spm:paramName "sshKey" ;
+    spm:defaultValue "/path/to/ssh/key" ;
+    spm:paramDescription "Path to the SSH key file." .
+
+spm_params:sshConnectionString a spm:Parameter ;
+    spm:paramName "sshConnectionString" ;
+    spm:defaultValue "user@hostname" ;
+    spm:paramDescription "The SSH connection string used for secure shell access, typically in the format user@hostname." .
+
+spm_params:databaseURL a spm:Parameter ;
+    spm:paramName "databaseURL" ;
+    spm:defaultValue "jdbc:mysql://localhost:3306/mydatabase" ;
+    spm:paramDescription "URL to the database." .
+
+spm_params:databaseName a spm:Parameter ;
+    spm:paramName "databaseName" ;
+    spm:defaultValue "mydatabase" ;
+    spm:paramDescription "Name of the database." .
+
+spm_params:ip a spm:Parameter ;
+    spm:paramName "ip" ;
+    spm:defaultValue "192.168.1.1" ;
+    spm:paramDescription "IP address of the service." .
+
+spm_params:port a spm:Parameter ;
+    spm:paramName "port" ;
+    spm:defaultValue "80" ;
+    spm:paramDescription "Port number for the service." .
+
+spm_params:ec2InstanceId a spm:Parameter ;
+    spm:paramName "ec2InstanceId" ;
+    spm:defaultValue "" ;
+    spm:paramDescription "The unique identifier of an EC2 instance." .

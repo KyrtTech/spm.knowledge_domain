@@ -129,27 +129,29 @@ spm:operatesInRegion a rdf:Property ;
     rdfs:domain spm:CloudProvider ;
     rdfs:range xsd:string .
 
-# Class for Configuration Parameters
-spm:ConfigParam a rdfs:Class ;
-    rdfs:comment "A configuration parameter required by the different software entities, with name, description, and default value." .
+spm:Parameter a rdfs:Class ;
+  rdfs:comment "A parameter that can be used as input to or output from an install strategy." .
 
-# Property for the name of the ConfigParam
-spm:paramName a rdf:Property ;
-    rdfs:domain spm:ConfigParam ;
-    rdfs:range xsd:string ;
-    rdfs:comment "The name of the configuration parameter." .
+# Properties for Parameter
+spm:parameterName a rdf:Property ;
+  rdfs:domain spm:Parameter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The name of the install parameter." .
 
-# Property for the description of the ConfigParam
-spm:paramDescription a rdf:Property ;
-    rdfs:domain spm:ConfigParam ;
-    rdfs:range xsd:string ;
-    rdfs:comment "A description of what the configuration parameter does." .
+spm:parameterValue a rdf:Property ;
+  rdfs:domain spm:Parameter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The value of the install parameter." .
 
-# Property for the default value of the ConfigParam
+spm:parameterDescription a rdf:Property ;
+  rdfs:domain spm:Parameter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "A description of the install parameter." .
+
 spm:defaultValue a rdf:Property ;
-    rdfs:domain spm:ConfigParam ;
-    rdfs:range xsd:string ;
-    rdfs:comment "The default value of the configuration parameter." .
+  rdfs:domain spm:Parameter ;
+  rdfs:range xsd:string ;
+  rdfs:comment "The default value for the install parameter." .
 
 # InstallStrategy class
 spm:InstallStrategy a rdfs:Class ;
@@ -173,11 +175,17 @@ spm:hasDependency a rdf:Property ;
     rdfs:range spm:SemanticVersioningApplication ;
     rdfs:comment "Indicates a dependency of the install strategy on another SemanticVersioningApplication." .
 
-# Property for listing configuration parameters
-spm:hasConfigParam a rdf:Property ;
-    rdfs:domain spm:InstallStrategy ;
-    rdfs:range spm:ConfigParam ;
-    rdfs:comment "A configuration parameter required by the install strategy." .
+# Property indicating an install parameter is an output of an install strategy
+spm:producesParam a rdf:Property ;
+  rdfs:domain spm:InstallStrategy ;
+  rdfs:range spm:Parameter ;
+  rdfs:comment "Indicates an install parameter is produced as an output by this install strategy." .
+
+# Property indicating an install parameter is required (as input) by an install strategy
+spm:requiresParam a rdf:Property ;
+  rdfs:domain spm:InstallStrategy ;
+  rdfs:range spm:Parameter ;
+  rdfs:comment "Indicates an install parameter is required as input by this install strategy." .
 
 # Property indicating the install scripts for an InstallStrategy
 spm:installScripts a rdf:Property ;
