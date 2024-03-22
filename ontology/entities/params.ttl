@@ -62,3 +62,21 @@ spm_params:ec2InstanceId a spm:Parameter ;
     spm:paramName "ec2InstanceId" ;
     spm:defaultValue "" ;
     spm:paramDescription "The unique identifier of an EC2 instance." .
+
+spm_params:jsonConfigFile a spm:Parameter ;
+    spm:paramName "jsonConfigFile" ;
+    spm:defaultValue "config.json" ;
+    spm:paramDescription "Path to the JSON configuration file." ;
+    spm:isFile "true"^^xsd:boolean .
+
+spm_params:yamlConfigFile a spm:Parameter ;
+    spm:paramName "yamlConfigFile" ;
+    spm:defaultValue "config.yaml" ;
+    spm:paramDescription "Path to the YAML configuration file." ;
+    spm:isFile "true"^^xsd:boolean .
+
+spm_params:tomlConfigFile a spm:Parameter ;
+    spm:paramName "tomlConfigFile" ;
+    spm:defaultValue "config.toml" ;
+    spm:paramDescription "Path to the TOML configuration file." ;
+    spm:isFile "true"^^xsd:boolean .
