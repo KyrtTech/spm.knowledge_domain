@@ -153,6 +153,11 @@ spm:defaultValue a rdf:Property ;
   rdfs:range xsd:string ;
   rdfs:comment "The default value for the install parameter." .
 
+spm:isFile a rdf:Property ;
+  rdfs:domain spm:Parameter ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Indicates whether the parameter is expected to be a file path (true) or not (false)." .
+
 # InstallStrategy class
 spm:InstallStrategy a rdfs:Class ;
     rdfs:comment "The process of installing a software application to different providers, including cloud platforms, bare metal servers, or local development setups." .

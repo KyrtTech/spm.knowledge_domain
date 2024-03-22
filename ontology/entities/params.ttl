@@ -25,7 +25,8 @@ spm_params:sshKeyAsString a spm:Parameter ;
 spm_params:sshKey a spm:Parameter ;
     spm:paramName "sshKey" ;
     spm:defaultValue "/path/to/ssh/key" ;
-    spm:paramDescription "Path to the SSH key file." .
+    spm:paramDescription "Path to the SSH key file." ;
+    spm:isFile "true"^^xsd:bolean .
 
 spm_params:sshConnectionString a spm:Parameter ;
     spm:paramName "sshConnectionString" ;
