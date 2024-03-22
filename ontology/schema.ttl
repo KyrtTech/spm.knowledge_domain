@@ -37,6 +37,13 @@ spm:endOfLifeDate a rdf:Property ;
     rdfs:domain spm:SemanticVersioningApplication ;
     rdfs:range xsd:date .
 
+# Property to represent semant
+spm:dependsOnSemanticApp a rdf:Property ;
+    rdfs:label "Dep on Semantic Application" ;
+    rdfs:comment "Indicates a dependency of this semantic app on another semantic app." ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range spm:SemanticVersioningApplication .
+
 # Class for Operating System Family
 spm:OperatingSystemFamily a rdfs:Class ;
     rdfs:label "Operating System Family" ;
@@ -206,7 +213,7 @@ spm:SoftwareService a rdfs:Class ;
 # Property for linking SoftwareService to ConfigParams
 spm:serviceHasConfigParam a rdf:Property ;
     rdfs:domain spm:SoftwareService ;
-    rdfs:range spm:ConfigParam ;
+    rdfs:range spm:Parameter ;
     rdfs:comment "A configuration parameter required by the software service." .
 
 # Property indicating dependencies on other SoftwareServices
