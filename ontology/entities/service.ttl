@@ -13,4 +13,4 @@ spm_services:Suri a spm:Service ;
     dcterms:title "Suri" ;
     spm:hasVersion "0.5.1" ;
     spm:dependsOnSemanticApp spm_platforms:NodeJS18 ;  # Assuming this is the correct reference for NodeJS version 18
-    spm:downloadURL <https://github.com/jstayton/suri/archive/refs/tags/v0.5.1.zip> .
+    spm:downloadURL "https://github.com/jstayton/suri/archive/refs/tags/v0.5.1.zip" .
