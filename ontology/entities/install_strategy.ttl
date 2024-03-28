@@ -27,4 +27,5 @@ spm_install_strategy:SuriInstall a spm:InstallStrategy ;
     dcterms:description "Install strategy for Suri, requiring IP, SSH connection string, and SSH key." ;
     spm:targetsApplication spm_services:Suri ;
     spm:requiresParameter spm_params:sshConnectionString, spm_params:sshKey ;
+    spm:producesParam spm_params:url ;
     spm:installScripts <https://github.com/KyrtTech/spm.install_strategies/blob/master/Suri/install.sh?raw=true> .
