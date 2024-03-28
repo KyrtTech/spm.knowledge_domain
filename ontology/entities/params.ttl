@@ -80,3 +80,9 @@ spm_params:tomlConfigFile a spm:Parameter ;
     spm:defaultValue "config.toml" ;
     spm:paramDescription "Path to the TOML configuration file." ;
     spm:isFile "true"^^xsd:boolean .
+
+spm_params:url a spm:Parameter ;
+    spm:paramName "url" ;
+    spm:defaultValue "" ;  # Assuming the default value might be empty, adjust as necessary
+    spm:paramDescription "The URL used for accessing a resource or endpoint." ;
+    spm:isFile "false"^^xsd:boolean .
