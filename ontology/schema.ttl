@@ -199,6 +199,12 @@ spm:requiresParam a rdf:Property ;
   rdfs:range spm:Parameter ;
   rdfs:comment "Indicates an install parameter is required as input by this install strategy." .
 
+# Property indicating an install parameter is optional (as input) by an install strategy
+spm:optionalParam a rdf:Property ;
+  rdfs:domain spm:InstallStrategy ;
+  rdfs:range spm:Parameter ;
+  rdfs:comment "Indicates an install parameter is optional as input by this install strategy." .
+
 # Property indicating the install scripts for an InstallStrategy
 spm:installScripts a rdf:Property ;
     rdfs:domain spm:InstallStrategy ;
