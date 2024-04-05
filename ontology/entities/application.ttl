@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_apps: <http://the-spm.org/entities/apps/> .
+
+spm_apps:AWSCli a spm:SemanticVersioningApplication ;
+    dcterms:title "AWS CLI" ;
+    spm:hasVersion "2.0.0" ;
+    dcterms:description "The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services." .
