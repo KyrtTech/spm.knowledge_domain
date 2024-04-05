@@ -8,6 +8,6 @@
 
 @prefix spm_runners: <http://the-spm.org/entities/runners/> .
 
-spm:LinuxRunnerWithAWS a spm:Runner ;
+spm_runners:LinuxRunnerWithAWS a spm:Runner ;
     spm:runsOnOperatingSystem spm_os:macOSMonterey, spm_os:Ubuntu2310, spm_os:Ubuntu2304, spm_os:Ubuntu2204LTS, spm_os:Ubuntu2004LTS ;
     spm:supportsApplication spm_apps:AWSCli .
