@@ -1,0 +1,13 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix spm: <http://the-spm.org/schema#> .
+@prefix spm_os: <http://the-spm.org/entities/os/> .
+@prefix spm_apps: <http://the-spm.org/entities/apps/> .
+
+@prefix spm_runners: <http://the-spm.org/entities/runners/> .
+
+spm:LinuxLikeRunner a spm:Runner ;
+    spm:runsOnOperatingSystem spm_os:macOSMonterey, spm_os:Ubuntu2310, spm_os:Ubuntu2304, spm_os:Ubuntu2204LTS, spm_os:Ubuntu2004LTS ;
+    spm:supportsApplication spm_apps:AWSCli .

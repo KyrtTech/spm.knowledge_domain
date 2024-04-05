@@ -233,3 +233,19 @@ spm:downloadURL a rdf:Property ;
     rdfs:domain spm:SoftwareService ;
     rdfs:range xsd:anyURI ;
     rdfs:comment "A URL from where the software service can be downloaded." .
+
+spm:Runner a rdfs:Class ;
+    rdfs:label "Runner" ;
+    rdfs:comment "Represents the environment where an installation will be executed. This could be a local machine, a virtual machine, a containerized environment, or a CI/CD pipeline" .
+
+# Property linking Runner to its Operating System
+spm:runsOnOperatingSystem a rdf:Property ;
+    rdfs:domain spm:Runner ;
+    rdfs:range spm:OperatingSystem ;
+    rdfs:comment "Specifies the operating system that the runner is using." .
+
+# Property linking Runner to SemanticVersioningApplications it supports
+spm:supportsApplication a rdf:Property ;
+    rdfs:domain spm:Runner ;
+    rdfs:range spm:SemanticVersioningApplication ;
+    rdfs:comment "Indicates the semantic versioning applications that are installed or required on the runner." .
