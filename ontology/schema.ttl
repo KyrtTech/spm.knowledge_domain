@@ -211,6 +211,12 @@ spm:installScripts a rdf:Property ;
     rdfs:range xsd:anyURI ;
     rdfs:comment "Links an install strategy to the scripts that need to be run for the strategy to work." .
 
+# Property specifying the Runner for an InstallStrategy
+spm:executedOnRunner a rdf:Property ;
+    rdfs:domain spm:InstallStrategy ;
+    rdfs:range spm:Runner ;
+    rdfs:comment "Specifies the Runner on which the install strategy is executed." .
+
 # Define SoftwareService as a subclass of SemanticVersioningApplication
 spm:SoftwareService a rdfs:Class ;
     rdfs:subClassOf spm:SemanticVersioningApplication ;
