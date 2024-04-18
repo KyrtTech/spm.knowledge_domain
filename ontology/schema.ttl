@@ -165,6 +165,26 @@ spm:isFile a rdf:Property ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Indicates whether the parameter is expected to be a file path (true) or not (false)." .
 
+spm:Argument a rdfs:Class ;
+    rdfs:comment "Represents an argument passed to an install strategy, which refers to a Parameter definition and can be renamed locally." .
+
+# Property for Arguments to refer to Parameter types
+spm:argumentType a rdf:Property ;
+    rdfs:domain spm:Argument ;
+    rdfs:range spm:Parameter ;
+    rdfs:comment "The Parameter type that defines the type of data this argument expects." .
+
+# Property to optionally rename the Argument within the context of its use
+spm:argumentName a rdf:Property ;
+    rdfs:domain spm:Argument ;
+    rdfs:range xsd:string ;
+    rdfs:comment "An optional new name for the argument within the context of a specific InstallStrategy." .
+
+spm:argumentDescription a rdf:Property ;
+    rdfs:domain spm:Argument ;
+    rdfs:range xsd:string ;
+    rdfs:comment "An optional description of the argument within the context of a specific InstallStrategy." .
+
 # InstallStrategy class
 spm:InstallStrategy a rdfs:Class ;
     rdfs:comment "The process of installing a software application to different providers, including cloud platforms, bare metal servers, or local development setups." .
@@ -193,17 +213,17 @@ spm:producesParam a rdf:Property ;
   rdfs:range spm:Parameter ;
   rdfs:comment "Indicates an install parameter is produced as an output by this install strategy." .
 
-# Property indicating an install parameter is required (as input) by an install strategy
-spm:requiresParam a rdf:Property ;
-  rdfs:domain spm:InstallStrategy ;
-  rdfs:range spm:Parameter ;
-  rdfs:comment "Indicates an install parameter is required as input by this install strategy." .
+# Property to link InstallStrategy to its Arguments
+spm:requiresArgument a rdf:Property ;
+    rdfs:domain spm:InstallStrategy ;
+    rdfs:range spm:Argument ;
+    rdfs:comment "Links an install strategy to its arguments, each of which is a specific, possibly renamed use of a Parameter type." .
 
-# Property indicating an install parameter is optional (as input) by an install strategy
-spm:optionalParam a rdf:Property ;
+# Property indicating an install argument is optional (as input) by an install strategy
+spm:optionalArgument a rdf:Property ;
   rdfs:domain spm:InstallStrategy ;
-  rdfs:range spm:Parameter ;
-  rdfs:comment "Indicates an install parameter is optional as input by this install strategy." .
+  rdfs:range spm:Argument ;
+  rdfs:comment "Indicates an install argument is optional as input by this install strategy." .
 
 # Property indicating the install scripts for an InstallStrategy
 spm:installScripts a rdf:Property ;

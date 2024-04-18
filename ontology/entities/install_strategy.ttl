@@ -26,8 +26,19 @@ spm_install_strategy:SuriInstall a spm:InstallStrategy ;
     dcterms:title "Install Suri on remote server using ssh" ;
     dcterms:description "Install strategy for Suri, requiring IP, SSH connection string, and SSH key." ;
     spm:targetsApplication spm_services:Suri ;
-    spm:requiresParam spm_params:sshConnectionString, spm_params:sshKey ;
-    spm:optionalParam spm_params:jsonConfigFile ;
+    spm:requiresArgument spm_install_strategy:SuriInstallSSHConnectionString, spm_install_strategy:SuriInstallSSHKey ;
+    spm:optionalArgument spm_install_strategy:SuriInstallLinksConfig ;
     spm:producesParam spm_params:url ;
     spm:installScripts <https://github.com/KyrtTech/spm.install_strategies/blob/master/Suri/install.sh?raw=true> ;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
+
+spm_install_strategy:SuriInstallSSHConnectionString a spm:Argument ;
+    spm:argumentType spm_params:sshConnectionString.
+
+spm_install_strategy:SuriInstallSSHKey a spm:Argument ;
+    spm:argumentType spm_params:sshKey .
+
+spm_install_strategy:SuriInstallLinksConfig a spm:Argument ;
+    spm:argumentType spm_params:jsonConfigFile ;
+    spm:argumentName "linksConfig" ;
+    spm:argumentDescription "The key is the 'shortlink' path that gets redirected, and the value is the target URL. Keys can be as short or as long as you want, using whatever mixture of characters you want. / is a special entry for redirecting the root path." .
