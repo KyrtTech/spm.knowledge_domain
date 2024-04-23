@@ -22,6 +22,16 @@ spm_install_strategy:Node18AWS a spm:InstallStrategy ;
     spm:documentation <https://example.com/install-node18-aws> ;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
 
+spm_install_strategy:Node20AWS a spm:InstallStrategy ;
+    dcterms:title "Install Node 20 on AWS" ;
+    dcterms:description "This install strategy outlines the steps to create an AWS EC2 instance specifically for running Node 20. It includes the application of a security policy that opens up port 80 to allow HTTP traffic, ensuring the Node application is accessible over the web." ;
+    spm:targetsApplication spm_platforms:NodeJS20 ;
+    spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
+    spm:producesParam spm_params:sshConnectionString, spm_params:sshKey, spm_params:ec2InstanceId ;
+    spm:installScripts <https://github.com/KyrtTech/spm.install_strategies/blob/master/Node20AWS/install.sh?raw=true> ;
+    spm:documentation <https://example.com/install-node20-aws> ;
+    spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
+
 spm_install_strategy:SuriInstall a spm:InstallStrategy ;
     dcterms:title "Install Suri on remote server using ssh" ;
     dcterms:description "Install strategy for Suri, requiring IP, SSH connection string, and SSH key." ;
