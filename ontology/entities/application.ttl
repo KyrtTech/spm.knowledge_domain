@@ -10,3 +10,8 @@ spm_apps:AWSCli a spm:SemanticVersioningApplication ;
     dcterms:title "AWS CLI" ;
     spm:hasVersion "2.0.0" ;
     dcterms:description "The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services." .
+
+spm_apps:Redis a spm:SemanticVersioningApplication ;
+    dcterms:title "Redis" ;
+    spm:hasVersion "7.2.5" ;
+    dcterms:description "Redis is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
