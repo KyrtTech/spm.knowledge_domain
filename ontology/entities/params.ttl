@@ -86,3 +86,15 @@ spm_params:url a spm:Parameter ;
     spm:defaultValue "" ;  # Assuming the default value might be empty, adjust as necessary
     spm:paramDescription "The URL used for accessing a resource or endpoint." ;
     spm:isFile "false"^^xsd:boolean .
+
+spm_params:redisHost a spm:Parameter ;
+    spm:paramName "redisHost" ;
+    spm:defaultValue "localhost" ;
+    spm:paramDescription "The host/url for accessing a Redis server" ;
+    spm:isFile "false"^^xsd:boolean .
+
+spm_params:redisPort a spm:Parameter ;
+    spm:paramName "redisPort" ;
+    spm:defaultValue "6379" ;
+    spm:paramDescription "The port for accessing a Redis server" ;
+    spm:isFile "false"^^xsd:boolean .
