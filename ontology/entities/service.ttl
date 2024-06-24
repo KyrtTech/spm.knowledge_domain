@@ -7,6 +7,8 @@
 
 @prefix spm_services: <http://the-spm.org/entities/services/> .
 
+@prefix spm_apps: <http://the-spm.org/entities/apps/> .
+
 @prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
 
 spm_services:Suri a spm:Service ;
@@ -14,3 +16,10 @@ spm_services:Suri a spm:Service ;
     spm:hasVersion "0.5.1" ;
     spm:dependsOnSemanticApp spm_platforms:NodeJS18 ;  # Assuming this is the correct reference for NodeJS version 18
     spm:downloadURL "https://github.com/jstayton/suri/archive/refs/tags/v0.5.1.zip" .
+
+spm_services:Kutt a spm:Service ;
+    dcterms:title "Kutt" ;
+    spm:hasVersion "2.7.4" ;
+    spm:dependsOnSemanticApp spm_platforms:NodeJS18, spm_apps:Redis ;
+    spm:downloadURL <https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.4.zip> ;
+    dcterms:description "Kutt is a free, open-source URL shortener with a robust API that provides features like custom URLs, detailed stats, and more." .
