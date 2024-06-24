@@ -8,6 +8,8 @@
 @prefix spm_services: <http://the-spm.org/entities/services/> .
 @prefix spm_runners: <http://the-spm.org/entities/runners/> .
 
+@prefix spm_apps: <http://the-spm.org/entities/apps/> .
+
 @prefix spm_install_strategy: <http://the-spm.org/entities/install-strategies/> .
 
 
@@ -52,3 +54,29 @@ spm_install_strategy:SuriInstallLinksConfig a spm:Argument ;
     spm:argumentType spm_params:jsonConfigFile ;
     spm:argumentName "linksConfig" ;
     spm:argumentDescription "The key is the 'shortlink' path that gets redirected, and the value is the target URL. Keys can be as short or as long as you want, using whatever mixture of characters you want. / is a special entry for redirecting the root path." .
+
+spm_install_strategy:RedisAWS a spm:InstallStrategy ;
+    dcterms:description "This strategy outlines the installation process for Redis version 7.2.5, ensuring optimal configuration and performance tuning." ;
+    dcterms:title "Install Redis" ;
+    spm:targetsApplication spm_apps:Redis ;
+    spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
+    spm:producesParam spm_params:redisPort, spm_params:redisHost .
+
+spm_install_strategy:KuttAWS a spm:InstallStrategy ;
+    dcterms:title "Install Kutt on AWS" ;
+    dcterms:description "This strategy outlines the process for deploying Kutt on AWS, focusing on cloud-specific configurations and optimizations." ;
+    spm:targetsApplication spm_services:Kutt ;
+    spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort ;
+    spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
+
+spm_install_strategy:KuttInstallSSHConnectionString a spm:Argument ;
+    spm:argumentType spm_params:sshConnectionString.
+
+spm_install_strategy:KuttInstallSSHKey a spm:Argument ;
+    spm:argumentType spm_params:sshKey .
+
+spm_install_strategy:KuttRedisHost a spm:Argument ;
+    spm:argumentType spm_params:redisHost.
+
+spm_install_strategy:KuttRedisPort a spm:Argument ;
+    spm:argumentType spm_params:redisPort .
