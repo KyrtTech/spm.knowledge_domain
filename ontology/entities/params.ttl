@@ -98,3 +98,21 @@ spm_params:redisPort a spm:Parameter ;
     spm:defaultValue "6379" ;
     spm:paramDescription "The port for accessing a Redis server" ;
     spm:isFile "false"^^xsd:boolean .
+
+spm_params:redisUser a spm:Parameter ;
+    spm:paramName "redisUser" ;
+    spm:defaultValue "redis" ;
+    spm:paramDescription "The username for accessing a Redis server" ;
+    spm:isFile "false"^^xsd:boolean .
+
+spm_params:redisPassword a spm:Parameter ;
+    spm:paramName "redisPass" ;
+    spm:defaultValue "pass" ;
+    spm:paramDescription "The password for accessing a Redis server" ;
+    spm:isFile "false"^^xsd:boolean .
+
+spm_params:redisConnectionString a spm:Parameter ;
+    spm:paramName "redisConnectionString" ;
+    spm:defaultValue "" ;
+    spm:paramDescription "A connection string for a redis instance" ;
+    spm:isFile "false"^^xsd:boolean .
