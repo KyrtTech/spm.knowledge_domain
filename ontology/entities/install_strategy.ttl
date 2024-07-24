@@ -60,7 +60,7 @@ spm_install_strategy:RedisAWS a spm:InstallStrategy ;
     dcterms:title "Install Redis" ;
     spm:targetsApplication spm_apps:Redis ;
     spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
-    spm:producesParam spm_params:redisPort, spm_params:redisHost .
+    spm:producesParam spm_params:redisPort, spm_params:redisHost, spm_params:redisUser, spm_params:redisPassword, smp_params:redisConnectionString .
 
 spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:title "Install Kutt on AWS" ;
