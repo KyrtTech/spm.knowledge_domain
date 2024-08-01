@@ -34,6 +34,16 @@ spm_install_strategy:Node20AWS a spm:InstallStrategy ;
     spm:documentation <https://example.com/install-node20-aws> ;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
 
+spm_install_strategy:Node18GCP a spm:InstallStrategy ;
+    dcterms:title "Install Node 18 on GCP" ;
+    dcterms:description "This install strategy outlines the steps to create an AWS EC2 instance specifically for running Node 20. It includes the application of a security policy that opens up port 80 to allow HTTP traffic, ensuring the Node application is accessible over the web." ;
+    spm:targetsApplication spm_platforms:NodeJS18 ;
+    spm:usesInfrastructureProvider spm_cloud_providers:GCP ;
+    spm:producesParam spm_params:sshConnectionString, spm_params:sshKey, spm_params:ec2InstanceId ;
+    spm:installScripts <https://github.com/KyrtTech/spm.install_strategies/blob/master/Node20AWS/install.sh?raw=true> ;
+    spm:documentation <https://example.com/install-node20-aws> ;
+    spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
+
 spm_install_strategy:SuriInstall a spm:InstallStrategy ;
     dcterms:title "Install Suri on remote server using ssh" ;
     dcterms:description "Install strategy for Suri, requiring IP, SSH connection string, and SSH key." ;
@@ -59,14 +69,15 @@ spm_install_strategy:RedisAWS a spm:InstallStrategy ;
     dcterms:description "This strategy outlines the installation process for Redis version 7.2.5, ensuring optimal configuration and performance tuning." ;
     dcterms:title "Install Redis" ;
     spm:targetsApplication spm_apps:Redis ;
+    spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/install.sh> ;
     spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
-    spm:producesParam spm_params:redisPort, spm_params:redisHost, spm_params:redisUser, spm_params:redisPassword, smp_params:redisConnectionString .
+    spm:producesParam spm_params:redisPort, spm_params:redisHost, spm_params:redisUser, spm_params:redisPassword, spm_params:redisConnectionString .
 
 spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:title "Install Kutt on AWS" ;
     dcterms:description "This strategy outlines the process for deploying Kutt on AWS, focusing on cloud-specific configurations and optimizations." ;
     spm:targetsApplication spm_services:Kutt ;
-    spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort ;
+    spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort, spm_install_strategy:KuttRedisUser, spm_install_strategy:KuttRedisPassword;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
 
 spm_install_strategy:KuttInstallSSHConnectionString a spm:Argument ;
@@ -80,3 +91,9 @@ spm_install_strategy:KuttRedisHost a spm:Argument ;
 
 spm_install_strategy:KuttRedisPort a spm:Argument ;
     spm:argumentType spm_params:redisPort .
+
+spm_install_strategy:KuttRedisUser a spm:Argument ;
+    spm:argumentType spm_params:redisUser .
+
+spm_install_strategy:KuttRedisPassword a spm:Argument ;
+    spm:argumentType spm_params:redisPassword .
