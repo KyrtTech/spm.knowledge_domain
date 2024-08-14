@@ -70,8 +70,33 @@ spm_install_strategy:RedisAWS a spm:InstallStrategy ;
     dcterms:title "Install Redis" ;
     spm:targetsApplication spm_apps:Redis ;
     spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/install.sh> ;
+    spm:supportFiles spm_install_strategy:RedisAWSSupportPackageLock, spm_install_strategy:RedisAWSSupportPackage, spm_install_strategy:RedisAWSSupportCDK, spm_install_strategy:RedisAWSSupportCdkContext, spm_install_strategy:RedisAWSSupportLib, spm_install_strategy:RedisAWSSupportBin;
     spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
     spm:producesParam spm_params:redisPort, spm_params:redisHost, spm_params:redisUser, spm_params:redisPassword, spm_params:redisConnectionString .
+
+spm_install_strategy:RedisAWSSupportPackageLock a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/package-lock.json" ;
+    spm_install_strategy:localPath "./package-lock.json" .
+
+spm_install_strategy:RedisAWSSupportPackage a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/package.json" ;
+    spm_install_strategy:localPath "./package.json" .
+
+spm_install_strategy:RedisAWSSupportCDK a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/cdk.json" ;
+    spm_install_strategy:localPath "./cdk.json" .
+
+spm_install_strategy:RedisAWSSupportCdkContext a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/cdk.context.json" ;
+    spm_install_strategy:localPath "./cdk.context.json" .
+
+spm_install_strategy:RedisAWSSupportLib a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/lib/redis_aws-stack.js" ;
+    spm_install_strategy:localPath "./lib/redis_aws-stack.js" .
+
+spm_install_strategy:RedisAWSSupportBin a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/bin/redis_aws.js" ;
+    spm_install_strategy:localPath "./bin/redis_aws.js" .
 
 spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:title "Install Kutt on AWS" ;
