@@ -44,6 +44,19 @@ spm:dependsOnSemanticApp a rdf:Property ;
     rdfs:domain spm:SemanticVersioningApplication ;
     rdfs:range spm:SemanticVersioningApplication .
 
+spm:RemoteFileEntry a rdfs:Class ;
+    rdfs:comment "A remote file entry. This can be used to represent a remote file structure." .
+
+spm:accessUrl a rdf:Property ;
+    rdfs:domain spm:RemoteFileEntry ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "A file remote address" .
+
+spm:localPath a rdf:Property ;
+    rdfs:domain spm:RemoteFileEntry ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A local file path for a file system." .
+
 # Class for Operating System Family
 spm:OperatingSystemFamily a rdfs:Class ;
     rdfs:label "Operating System Family" ;
@@ -230,6 +243,12 @@ spm:installScripts a rdf:Property ;
     rdfs:domain spm:InstallStrategy ;
     rdfs:range xsd:anyURI ;
     rdfs:comment "Links an install strategy to the scripts that need to be run for the strategy to work." .
+
+# Property indicating support files for an install stategy
+spm:supportFiles a rdf:Property ;
+    rdfs:domain spm:InstallStrategy ;
+    rdfs:range spm:RemoteFileEntry ;
+    rdfs:comment "Support files for an install strategy scripts. The main case is for install strategies that use a IaC products" .
 
 # Property specifying the Runner for an InstallStrategy
 spm:executedOnRunner a rdf:Property ;
