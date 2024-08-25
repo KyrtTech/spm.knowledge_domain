@@ -15,3 +15,8 @@ spm_apps:Redis a spm:SemanticVersioningApplication ;
     dcterms:title "Redis" ;
     spm:hasVersion "7.2.5" ;
     dcterms:description "Redis is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
+
+spm_apps:Postgres a spm:SemanticVersioningApplication ;
+    dcterms:title "Postgres" ;
+    spm:hasVersion "16.3" ;
+    dcterms:description "Postgres is an relational database" .

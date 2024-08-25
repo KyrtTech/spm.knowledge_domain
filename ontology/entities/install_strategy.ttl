@@ -98,6 +98,23 @@ spm_install_strategy:RedisAWSSupportBin a spm:RemoteFileEntry ;
     spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/RedisAWS/bin/redis_aws.js" ;
     spm_install_strategy:localPath "./bin/redis_aws.js" .
 
+spm_install_strategy:PostgresAWS a spm:InstallStrategy ;
+    dcterms:description "This strategy outlines the installation process for RDS Postgress in AWS" ;
+    dcterms:title "Install RDS Postgres" ;
+    spm:targetsApplication spm_apps:Postgres ;
+    spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/PostgresSQLAWS/install.sh> ;
+    spm:supportFiles spm_install_strategy:PostgresAWSMain, spm_install_strategy:PostgresAWSVariables;
+    spm:usesInfrastructureProvider spm_cloud_providers:AWS ;
+    spm:producesParam spm_params:databaseName, spm_params:databasePassword, spm_params:databaseURL, spm_params:databaseUsername, spm_params:port .
+
+spm_install_strategy:PostgresAWSMain a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/PostgresSQLAWS/main.tf" ;
+    spm_install_strategy:localPath "./main.tf" .
+
+spm_install_strategy:PostgresAWSVariables a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/PostgresSQLAWS/variables.tf" ;
+    spm_install_strategy:localPath "./variables.tf" .
+
 spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:title "Install Kutt on AWS" ;
     dcterms:description "This strategy outlines the process for deploying Kutt on AWS, focusing on cloud-specific configurations and optimizations." ;
