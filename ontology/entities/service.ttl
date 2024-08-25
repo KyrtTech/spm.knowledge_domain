@@ -20,6 +20,6 @@ spm_services:Suri a spm:Service ;
 spm_services:Kutt a spm:Service ;
     dcterms:title "Kutt" ;
     spm:hasVersion "2.7.4" ;
-    spm:dependsOnSemanticApp spm_platforms:NodeJS18, spm_apps:Redis ;
-    spm:downloadURL <https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.4.zip> ;
+    spm:dependsOnSemanticApp spm_platforms:NodeJS18, spm_apps:Redis, spm_apps:Postgres ;
+    spm:downloadURL "https://github.com/thedevs-network/kutt/archive/refs/tags/v2.7.4.zip" ;
     dcterms:description "Kutt is a free, open-source URL shortener with a robust API that provides features like custom URLs, detailed stats, and more." .

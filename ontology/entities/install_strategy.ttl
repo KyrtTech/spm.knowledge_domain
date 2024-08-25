@@ -119,8 +119,14 @@ spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:title "Install Kutt on AWS" ;
     dcterms:description "This strategy outlines the process for deploying Kutt on AWS, focusing on cloud-specific configurations and optimizations." ;
     spm:targetsApplication spm_services:Kutt ;
-    spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort, spm_install_strategy:KuttRedisUser, spm_install_strategy:KuttRedisPassword;
+    spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/install.sh> ;
+    spm:supportFiles spm_install_strategy:KuttAWSEnv ;
+    spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort, spm_install_strategy:KuttRedisUser, spm_install_strategy:KuttRedisPassword,  spm_install_strategy:KuttPostgresHost, spm_install_strategy:KuttPostgresPort, spm_install_strategy:KuttPostgresUser, spm_install_strategy:KuttPostgresPassword, spm_install_strategy:KuttPostgresDBName;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
+
+spm_install_strategy:KuttAWSEnv a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/update_env.sh" ;
+    spm_install_strategy:localPath "./update_env.sh" .
 
 spm_install_strategy:KuttInstallSSHConnectionString a spm:Argument ;
     spm:argumentType spm_params:sshConnectionString.
@@ -139,3 +145,18 @@ spm_install_strategy:KuttRedisUser a spm:Argument ;
 
 spm_install_strategy:KuttRedisPassword a spm:Argument ;
     spm:argumentType spm_params:redisPassword .
+
+spm_install_strategy:KuttPostgresHost a spm:Argument ;
+    spm:argumentType spm_params:databaseURL.
+
+spm_install_strategy:KuttPostgresPort a spm:Argument ;
+    spm:argumentType spm_params:port .
+
+spm_install_strategy:KuttPostgresUser a spm:Argument ;
+    spm:argumentType spm_params:databaseUsername .
+
+spm_install_strategy:KuttPostgresPassword a spm:Argument ;
+    spm:argumentType spm_params:databasePassword .
+
+spm_install_strategy:KuttPostgresDBName a spm:Argument ;
+    spm:argumentType spm_params:databaseName .
