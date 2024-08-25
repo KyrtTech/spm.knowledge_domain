@@ -43,6 +43,16 @@ spm_params:databaseName a spm:Parameter ;
     spm:defaultValue "mydatabase" ;
     spm:paramDescription "Name of the database." .
 
+spm_params:databaseUsername a spm:Parameter ;
+    spm:paramName "databaseUsername" ;
+    spm:defaultValue "admin" ;
+    spm:paramDescription "Username for the database" .
+
+spm_params:databasePassword a spm:Parameter ;
+    spm:paramName "databasePassword" ;
+    spm:defaultValue "" ;
+    spm:paramDescription "Password for the database" .
+
 spm_params:ip a spm:Parameter ;
     spm:paramName "ip" ;
     spm:defaultValue "192.168.1.1" ;
