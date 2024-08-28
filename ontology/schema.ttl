@@ -244,6 +244,12 @@ spm:installScripts a rdf:Property ;
     rdfs:range xsd:anyURI ;
     rdfs:comment "Links an install strategy to the scripts that need to be run for the strategy to work." .
 
+# Property indicating the uninstall scripts for an InstallStrategy
+spm:uninstallScripts a rdf:Property ;
+    rdfs:domain spm:InstallStrategy ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "Links an install strategy to the scripts that need to be run for the strategy to remove any resources it created." .
+
 # Property indicating support files for an install stategy
 spm:supportFiles a rdf:Property ;
     rdfs:domain spm:InstallStrategy ;
