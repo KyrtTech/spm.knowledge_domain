@@ -4,6 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix spm: <http://the-spm.org/schema#> .
+@prefix schema: <http://schema.org/> .
 
 @prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
 
