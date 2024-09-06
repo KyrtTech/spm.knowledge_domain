@@ -17,6 +17,21 @@ spm_params:maxThreads a spm:Parameter ;
     spm:defaultValue "4" ;
     spm:paramDescription "Maximum number of threads." .
 
+spm_params:ram a spm:Parameter ;
+    spm:paramName "RAM" ;
+    spm:defaultValue "1GB" ;
+    spm:paramDescription "Specifies the required amount of RAM in gigabytes." .
+
+spm_params:storage a spm:Parameter ;
+    spm:paramName "Hard Storage" ;
+    spm:defaultValue "10GB" ;
+    spm:paramDescription "Specifies the required hard disk storage in gigabytes." .
+
+spm_params:vcpu a spm:Parameter ;
+    spm:paramName "vCPU" ;
+    spm:defaultValue "2" ;  # Default value, often starting at 2 vCPUs for basic instances
+    spm:paramDescription "Specifies the number of virtual CPUs allocated to a computing instance. vCPUs are a measure of compute resources in cloud environments, often used to gauge processing power alongside physical CPUs." .
+
 spm_params:sshKeyAsString a spm:Parameter ;
     spm:paramName "sshKeyAsString" ;
     spm:defaultValue "ssh-rsa AAAA..." ;
