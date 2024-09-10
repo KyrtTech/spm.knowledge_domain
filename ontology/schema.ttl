@@ -178,6 +178,28 @@ spm:isFile a rdf:Property ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Indicates whether the parameter is expected to be a file path (true) or not (false)." .
 
+# Class for ParameterDependency
+spm:ParameterDependency a rdfs:Class ;
+    rdfs:comment "Encapsulates a dependency that links a specific parameter to a required value." .
+
+# Property to link to the Parameter
+spm:onParameter a rdf:Property ;
+    rdfs:domain spm:ParameterDependency ;
+    rdfs:range spm:Parameter ;
+    rdfs:comment "The parameter that this dependency concerns." .
+
+# Property to specify the required value
+spm:minValue a rdf:Property ;
+    rdfs:domain spm:ParameterDependency ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The specific required value for the parameter." .
+
+# Property to specify the required value
+spm:recommendedValue a rdf:Property ;
+    rdfs:domain spm:ParameterDependency ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The specific required value for the parameter." .
+
 spm:Argument a rdfs:Class ;
     rdfs:comment "Represents an argument passed to an install strategy, which refers to a Parameter definition and can be renamed locally." .
 
