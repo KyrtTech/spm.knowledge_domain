@@ -188,6 +188,11 @@ spm:onParameter a rdf:Property ;
     rdfs:range spm:Parameter ;
     rdfs:comment "The parameter that this dependency concerns." .
 
+spm:onApplication a rdf:Property ;
+    rdfs:domain spm:ParameterDependency ;
+    rdfs:range  spm:SemanticVersioningApplication ;
+    rdfs:comment "The semantic versioned app this dependency concerns." .
+
 # Property to specify the required value
 spm:minValue a rdf:Property ;
     rdfs:domain spm:ParameterDependency ;
@@ -289,12 +294,6 @@ spm:SoftwareService a rdfs:Class ;
     rdfs:subClassOf spm:SemanticVersioningApplication ;
     rdfs:comment "A software service that may depend on specific development platforms, configuration parameters, and other software services." .
 
-# Property for linking SoftwareService to ConfigParams
-spm:serviceHasConfigParam a rdf:Property ;
-    rdfs:domain spm:SoftwareService ;
-    rdfs:range spm:Parameter ;
-    rdfs:comment "A configuration parameter required by the software service." .
-
 # Property indicating dependencies on other SoftwareServices
 spm:dependsOnService a rdf:Property ;
     rdfs:domain spm:SoftwareService ;
@@ -306,6 +305,11 @@ spm:downloadURL a rdf:Property ;
     rdfs:domain spm:SoftwareService ;
     rdfs:range xsd:anyURI ;
     rdfs:comment "A URL from where the software service can be downloaded." .
+
+spm:serviceHasDependencyParameter a rdf:Property ;
+    rdfs:domain spm:SoftwareService ;
+    rdfs:range spm:ParameterDependency ;
+    rdfs:comment "Links a software service to one or more ParameterDependencies that specify the necessary configuration parameters and their required values." .
 
 spm:Runner a rdfs:Class ;
     rdfs:label "Runner" ;
