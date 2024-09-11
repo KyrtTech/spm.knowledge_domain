@@ -27,7 +27,7 @@ spm_params:storage a spm:Parameter ;
     spm:defaultValue "10GB" ;
     spm:paramDescription "Specifies the required hard disk storage in gigabytes." .
 
-spm_params:vcpu a spm:Parameter ;
+spm_params:vCPU a spm:Parameter ;
     spm:paramName "vCPU" ;
     spm:defaultValue "2" ;  # Default value, often starting at 2 vCPUs for basic instances
     spm:paramDescription "Specifies the number of virtual CPUs allocated to a computing instance. vCPUs are a measure of compute resources in cloud environments, often used to gauge processing power alongside physical CPUs." .
