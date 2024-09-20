@@ -122,13 +122,32 @@ spm_install_strategy:KuttAWS a spm:InstallStrategy ;
     dcterms:description "This strategy outlines the process for deploying Kutt on AWS, focusing on cloud-specific configurations and optimizations." ;
     spm:targetsApplication spm_services:Kutt ;
     spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/install.sh> ;
-    spm:supportFiles spm_install_strategy:KuttAWSEnv ;
+    spm:supportFiles spm_install_strategy:KuttAWSEnv, spm_install_strategy:KuttAWSKnex, spm_install_strategy:KuttAWSKnexMigrate;
     spm:requiresArgument spm_install_strategy:KuttInstallSSHConnectionString, spm_install_strategy:KuttInstallSSHKey, spm_install_strategy:KuttRedisHost, spm_install_strategy:KuttRedisPort, spm_install_strategy:KuttRedisUser, spm_install_strategy:KuttRedisPassword,  spm_install_strategy:KuttPostgresHost, spm_install_strategy:KuttPostgresPort, spm_install_strategy:KuttPostgresUser, spm_install_strategy:KuttPostgresPassword, spm_install_strategy:KuttPostgresDBName;
+    spm:optionalArgument spm_install_strategy:KuttAWSDomainOrIp, spm_install_strategy:KuttAWSPort;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
 
 spm_install_strategy:KuttAWSEnv a spm:RemoteFileEntry ;
     spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/update_env.sh" ;
     spm_install_strategy:localPath "./update_env.sh" .
+
+spm_install_strategy:KuttAWSKnex a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/knex.ts" ;
+    spm_install_strategy:localPath "./knex.ts" .
+
+spm_install_strategy:KuttAWSKnexMigrate a spm:RemoteFileEntry ;
+    spm_install_strategy:accessUrl "https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/Kutt/migration.ts" ;
+    spm_install_strategy:localPath "./migration.ts" .
+
+spm_install_strategy:KuttAWSDomainOrIp a spm:Argument ;
+    spm:argumentType spm_params:domainOrIp ;
+    spm:argumentName "domain" ;
+    spm:argumentDescription "This is the domain or ip that Kutt will be installed at" .
+
+spm_install_strategy:KuttAWSPort a spm:Argument ;
+    spm:argumentType spm_params:port ;
+    spm:argumentName "port" ;
+    spm:argumentDescription "This is the (optional) port that Kutt will respond on" .
 
 spm_install_strategy:KuttInstallSSHConnectionString a spm:Argument ;
     spm:argumentType spm_params:sshConnectionString.
