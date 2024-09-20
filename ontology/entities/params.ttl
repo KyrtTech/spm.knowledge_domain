@@ -141,3 +141,10 @@ spm_params:redisConnectionString a spm:Parameter ;
     spm:defaultValue "" ;
     spm:paramDescription "A connection string for a redis instance" ;
     spm:isFile "false"^^xsd:boolean .
+
+# Define the parameter for Domain or IP
+spm_params:domainOrIp a spm:Parameter ;
+    spm:parameterName "domainOrIp" ;
+    spm:parameterDescription "A parameter that can be used to specify either a domain name or an IP address." ;
+    spm:defaultValue "example.com" ;
+    spm:isFile "false"^^xsd:boolean .
