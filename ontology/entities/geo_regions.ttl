@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix spm: <http://the-spm.org/schema#> .
+
+@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions/> .
+
+# Define continents and some sub-regions as instances of GeoRegion
+spm_geo_regions:NorthAmerica a spm:GeoRegion ;
+    dcterms:title "North America" .
+
+spm_geo_regions:SouthAmerica a spm:GeoRegion ;
+    dcterms:title "South America" .
+
+spm_geo_regions:Europe a spm:GeoRegion ;
+    dcterms:title "Europe" .
+
+spm_geo_regions:Asia a spm:GeoRegion ;
+    dcterms:title "Asia" .
+
+spm_geo_regions:Africa a spm:GeoRegion ;
+    dcterms:title "Africa" .
+
+spm_geo_regions:Oceania a spm:GeoRegion ;
+    dcterms:title "Oceania" .
+
+spm_geo_regions:MiddleEast a spm:GeoRegion ;
+    dcterms:title "Middle East" .
+
+spm_geo_regions:CentralAmerica a spm:GeoRegion ;
+    dcterms:title "Central America" .
+
+spm_geo_regions:Caribbean a spm:GeoRegion ;
+    dcterms:title "Caribbean" .

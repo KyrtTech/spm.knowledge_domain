@@ -5,6 +5,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix spm: <http://the-spm.org/schema#> .
 @prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services/> .
+@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions/> .
 
 @prefix spm_cloud_providers: <http://the-spm.org/entities/cloud_providers/> .
 
@@ -14,18 +15,18 @@ spm_cloud_providers:AWS a spm:CloudProvider ;
     dcterms:description "A comprehensive, evolving cloud computing platform provided by Amazon." ;
     foaf:homepage <https://aws.amazon.com/> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInRegion spm:NorthAmerica, spm:Europe, spm:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .
 
 spm_cloud_providers:GCP a spm:CloudProvider ;
     dcterms:title "Google Cloud Platform" ;
     dcterms:description "A suite of cloud computing services that runs on the same infrastructure that Google uses internally for its end-user products." ;
     foaf:homepage <https://cloud.google.com/> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInRegion spm:NorthAmerica, spm:Europe, spm:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .
 
 spm_cloud_providers:Azure a spm:CloudProvider ;
     dcterms:title "Microsoft Azure" ;
     dcterms:description "A cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers." ;
     foaf:homepage <https://azure.microsoft.com/> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInRegion spm:NorthAmerica, spm:Europe, spm:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .

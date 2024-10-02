@@ -145,9 +145,13 @@ spm:offersService a rdf:Property ;
     rdfs:domain spm:CloudProvider ;
     rdfs:range spm:CloudServiceType .
 
-spm:operatesInRegion a rdf:Property ;
+spm:operatesInGeoRegion a rdf:Property ;
     rdfs:domain spm:CloudProvider ;
     rdfs:range xsd:string .
+
+# Class for GeoRegion
+spm:GeoRegion a rdfs:Class ;
+    rdfs:comment "Represents a broad geographic region, including continents and significant sub-regions within continents." .
 
 spm:Parameter a rdfs:Class ;
   rdfs:comment "A parameter that can be used as input to or output from an install strategy." .
