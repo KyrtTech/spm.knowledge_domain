@@ -10,12 +10,165 @@
 @prefix spm_cloud_providers: <http://the-spm.org/entities/cloud_providers/> .
 
 # Cloud Providers
+
+# Define AWSRegion instances with 'aws' prefix and operational statuses
+spm_cloud_providers:awsAfSouth1 a spm:AWSRegion ;
+    dcterms:title "Africa (Cape Town)" ;
+    spm:awsRegionName "af-south-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsApEast1 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Hong Kong)" ;
+    spm:awsRegionName "ap-east-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsApNortheast1 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Tokyo)" ;
+    spm:awsRegionName "ap-northeast-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApNortheast2 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Seoul)" ;
+    spm:awsRegionName "ap-northeast-2" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApNortheast3 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Osaka)" ;
+    spm:awsRegionName "ap-northeast-3" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApSouth1 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Mumbai)" ;
+    spm:awsRegionName "ap-south-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApSouth2 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Hyderabad)" ;
+    spm:awsRegionName "ap-south-2" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsApSoutheast1 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Singapore)" ;
+    spm:awsRegionName "ap-southeast-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApSoutheast2 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Sydney)" ;
+    spm:awsRegionName "ap-southeast-2" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsApSoutheast3 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Jakarta)" ;
+    spm:awsRegionName "ap-southeast-3" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsApSoutheast4 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Melbourne)" ;
+    spm:awsRegionName "ap-southeast-4" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsApSoutheast5 a spm:AWSRegion ;
+    dcterms:title "Asia Pacific (Malaysia)" ;
+    spm:awsRegionName "ap-southeast-5" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsEuCentral1 a spm:AWSRegion ;
+    dcterms:title "Europe (Frankfurt)" ;
+    spm:awsRegionName "eu-central-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsEuCentral2 a spm:AWSRegion ;
+    dcterms:title "Europe (Zurich)" ;
+    spm:awsRegionName "eu-central-2" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsEuWest1 a spm:AWSRegion ;
+    dcterms:title "Europe (Ireland)" ;
+    spm:awsRegionName "eu-west-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsEuWest2 a spm:AWSRegion ;
+    dcterms:title "Europe (London)" ;
+    spm:awsRegionName "eu-west-2" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsEuWest3 a spm:AWSRegion ;
+    dcterms:title "Europe (Paris)" ;
+    spm:awsRegionName "eu-west-3" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsEuSouth1 a spm:AWSRegion ;
+    dcterms:title "Europe (Milan)" ;
+    spm:awsRegionName "eu-south-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsEuSouth2 a spm:AWSRegion ;
+    dcterms:title "Europe (Spain)" ;
+    spm:awsRegionName "eu-south-2" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsEuNorth1 a spm:AWSRegion ;
+    dcterms:title "Europe (Stockholm)" ;
+    spm:awsRegionName "eu-north-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsCaCentral1 a spm:AWSRegion ;
+    dcterms:title "Canada (Central)" ;
+    spm:awsRegionName "ca-central-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsCaWest1 a spm:AWSRegion ;
+    dcterms:title "Canada West (Calgary)" ;
+    spm:awsRegionName "ca-west-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsUsEast1 a spm:AWSRegion ;
+    dcterms:title "US East (N. Virginia)" ;
+    spm:awsRegionName "us-east-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsUsEast2 a spm:AWSRegion ;
+    dcterms:title "US East (Ohio)" ;
+    spm:awsRegionName "us-east-2" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsUsWest1 a spm:AWSRegion ;
+    dcterms:title "US West (N. California)" ;
+    spm:awsRegionName "us-west-1" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsUsWest2 a spm:AWSRegion ;
+    dcterms:title "US West (Oregon)" ;
+    spm:awsRegionName "us-west-2" ;
+    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:awsIlCentral1 a spm:AWSRegion ;
+    dcterms:title "Israel (Tel Aviv)" ;
+    spm:awsRegionName "il-central-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsMeCentral1 a spm:AWSRegion ;
+    dcterms:title "Middle East (UAE)" ;
+    spm:awsRegionName "me-central-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsMeSouth1 a spm:AWSRegion ;
+    dcterms:title "Middle East (Bahrain)" ;
+    spm:awsRegionName "me-south-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
+spm_cloud_providers:awsSaEast1 a spm:AWSRegion ;
+    dcterms:title "South America (São Paulo)" ;
+    spm:awsRegionName "sa-east-1" ;
+    spm:awsRegionOptStatus "DISABLED" .
+
 spm_cloud_providers:AWS a spm:CloudProvider ;
     dcterms:title "Amazon Web Services" ;
     dcterms:description "A comprehensive, evolving cloud computing platform provided by Amazon." ;
     foaf:homepage <https://aws.amazon.com/> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific ;
+    spm:hasRegion spm_cloud_providers:awsAfSouth1, spm_cloud_providers:awsApEast1, spm_cloud_providers:awsApNortheast1, spm_cloud_providers:awsApNortheast2, spm_cloud_providers:awsApNortheast3, spm_cloud_providers:awsApSouth1, spm_cloud_providers:awsApSouth2, spm_cloud_providers:awsApSoutheast1, spm_cloud_providers:awsApSoutheast2, spm_cloud_providers:awsApSoutheast3, spm_cloud_providers:awsApSoutheast4, spm_cloud_providers:awsApSoutheast5, spm_cloud_providers:awsEuCentral1, spm_cloud_providers:awsEuCentral2, spm_cloud_providers:awsEuWest1, spm_cloud_providers:awsEuWest2, spm_cloud_providers:awsEuWest3, spm_cloud_providers:awsEuSouth1, spm_cloud_providers:awsEuSouth2, spm_cloud_providers:awsEuNorth1, spm_cloud_providers:awsCaCentral1, spm_cloud_providers:awsCaWest1, spm_cloud_providers:awsUsEast1, spm_cloud_providers:awsUsEast2, spm_cloud_providers:awsUsWest1, spm_cloud_providers:awsUsWest2, spm_cloud_providers:awsIlCentral1, spm_cloud_providers:awsMeCentral1, spm_cloud_providers:awsMeSouth1, spm_cloud_providers:awsSaEast1 .
 
 spm_cloud_providers:GCP a spm:CloudProvider ;
     dcterms:title "Google Cloud Platform" ;
