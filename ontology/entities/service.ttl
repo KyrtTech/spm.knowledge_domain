@@ -12,14 +12,14 @@
 @prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
 @prefix spm_params: <http://the-spm.org/entities/params/> .
 
-spm_services:Suri a spm:Service ;
+spm_services:Suri a spm:SoftwareService ;
     dcterms:title "Suri" ;
     spm:hasVersion "0.5.1" ;
     spm:dependsOnSemanticApp spm_platforms:NodeJS18 ;  # Assuming this is the correct reference for NodeJS version 18
     spm:downloadURL "https://github.com/jstayton/suri/archive/refs/tags/v0.5.1.zip" .
 
 # Kutt service
-spm_services:Kutt a spm:Service ;
+spm_services:Kutt a spm:SoftwareService ;
     dcterms:title "Kutt" ;
     spm:hasVersion "2.7.4" ;
     spm:dependsOnSemanticApp spm_platforms:NodeJS18, spm_apps:Redis, spm_apps:Postgres ;
