@@ -122,14 +122,21 @@ spm:isUsedForPlatform a rdf:Property ;
     rdfs:range spm:DevelopmentPlatform ;
     rdfs:comment "Associates a package manager with the development platform it is used for." .
 
+# Base class for Configuration Parameters
+spm:ConfigParameter a rdfs:Class ;
+    rdfs:comment "A general class for different types of configuration parameters." .
 
 # CloudProviderServices class
 spm:CloudServiceType a rdfs:Class .
 
-
 # Class for Infrastructure Provider
 spm:InfrastructureProvider a rdfs:Class ;
     rdfs:comment "An entity that provides the physical or virtual infrastructure for deploying software applications." .
+
+spm:infrastructureHasConfigParameter a rdfs:Class ;
+    rdfs:domain spm:InfrastructureProvider ;
+    rdfs:range rdfs:Class ;
+    rdfs:comment "Associates an infrastructure provider with various configuration parameters." .
 
 # CloudProvider class
 spm:CloudProvider a rdfs:Class ;
@@ -149,10 +156,6 @@ spm:operatesInGeoRegion a rdf:Property ;
     rdfs:domain spm:CloudProvider ;
     rdfs:range spm:GeoRegion .
 
-spm:hasRegion a rdf:Property ;
-    rdfs:domain spm:CloudProvider ;
-    rdfs:range spm:GeoRegion .
-
 # Class for GeoRegion
 spm:GeoRegion a rdfs:Class ;
     rdfs:comment "Represents a broad geographic region, including continents and significant sub-regions within continents." .
@@ -165,7 +168,7 @@ spm:regionName a rdf:Propery ;
 
 # Extend the general GeoRegion class for AWS-specific regions
 spm:AWSRegion a rdfs:Class ;
-    rdfs:subClassOf spm:GeoRegion ;
+    rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
     rdfs:comment "Represents a geographic region specifically operated by AWS." .
 
 # Property for region operational status
@@ -174,6 +177,31 @@ spm:awsRegionOptStatus a rdf:Property ;
     rdfs:domain spm:AWSRegion ;
     rdfs:range xsd:string ;
     rdfs:comment "Indicates the operational status of a cloud region, such as 'ENABLED_BY_DEFAULT', 'DISABLED'" .
+
+# Class for AWS VPC
+spm:AWSVPC a rdfs:Class ;
+    rdfs:comment "Represents an AWS Virtual Private Cloud, which provides a logically isolated section of the AWS Cloud." .
+
+spm:vpcId a rdf:Property ;
+    rdfs:domain spm:AWSVPC ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The unique identifier of the VPC." .
+
+# Property for subnets within a VPC
+spm:hasSubnet a rdf:Property ;
+    rdfs:domain spm:AWSVPC ;
+    rdfs:range spm:Subnet ;
+    rdfs:comment "Associates subnets with a VPC." .
+
+# Class for Subnets
+spm:Subnet a rdfs:Class ;
+    rdfs:comment "Represents a subnet within an AWS VPC, defining a segmented part of the VPC's IP address range." .
+
+# Property for availability zone of the subnet
+spm:inAvailabilityZone a rdf:Property ;
+    rdfs:domain spm:Subnet ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The availability zone in which the subnet resides." .
 
 
 spm:Parameter a rdfs:Class ;
