@@ -178,25 +178,6 @@ spm:awsRegionOptStatus a rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:comment "Indicates the operational status of a cloud region, such as 'ENABLED_BY_DEFAULT', 'DISABLED'" .
 
-# Class for AWS VPC
-spm:AWSVPC a rdfs:Class ;
-    rdfs:comment "Represents an AWS Virtual Private Cloud, which provides a logically isolated section of the AWS Cloud." .
-
-spm:vpcId a rdf:Property ;
-    rdfs:domain spm:AWSVPC ;
-    rdfs:range xsd:string ;
-    rdfs:comment "The unique identifier of the VPC." .
-
-# Property for subnets within a VPC
-spm:hasSubnet a rdf:Property ;
-    rdfs:domain spm:AWSVPC ;
-    rdfs:range spm:Subnet ;
-    rdfs:comment "Associates subnets with a VPC." .
-
-# Class for Subnets
-spm:Subnet a rdfs:Class ;
-    rdfs:comment "Represents a subnet within an AWS VPC, defining a segmented part of the VPC's IP address range." .
-
 # Property for availability zone of the subnet
 spm:inAvailabilityZone a rdf:Property ;
     rdfs:domain spm:Subnet ;
@@ -232,6 +213,12 @@ spm:isFile a rdf:Property ;
   rdfs:domain spm:Parameter ;
   rdfs:range xsd:boolean ;
   rdfs:comment "Indicates whether the parameter is expected to be a file path (true) or not (false)." .
+
+# Property definition for isBuildable
+spm:isBuildable a rdf:Property ;
+  rdfs:label "is Buildable" ;
+  rdfs:comment "Indicates whether the resource can be built or generated through a build strategy. True means it is buildable, false means it is not." ;
+  rdfs:range xsd:boolean .
 
 # Class for ParameterDependency
 spm:ParameterDependency a rdfs:Class ;
