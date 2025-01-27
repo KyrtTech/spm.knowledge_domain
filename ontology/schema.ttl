@@ -267,6 +267,12 @@ spm:argumentDescription a rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:comment "An optional description of the argument within the context of a specific InstallStrategy." .
 
+# Property to specify allowed values for an argument
+spm:allowedValues a rdf:Property ;
+    rdfs:domain spm:Argument ;
+    rdfs:range rdf:List ;
+    rdfs:comment "A list of allowed values that this argument can take, restricting the possible values of the parameter." .
+
 # InstallStrategy class
 spm:InstallStrategy a rdfs:Class ;
     rdfs:comment "The process of installing a software application to different providers, including cloud platforms, bare metal servers, or local development setups." .
