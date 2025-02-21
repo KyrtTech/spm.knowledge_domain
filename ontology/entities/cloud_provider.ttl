@@ -165,6 +165,7 @@ spm_cloud_providers:awsSaEast1 a spm:AWSRegion ;
 
 # Class for AWS VPC
 spm_cloud_providers:AWSVPC a rdfs:Class ;
+    rdfs:label "VPC" ;
     rdfs:comment "Represents an AWS Virtual Private Cloud, which provides a logically isolated section of the AWS Cloud." ;
     spm:isBuildable "true"^^xsd:boolean .
 
