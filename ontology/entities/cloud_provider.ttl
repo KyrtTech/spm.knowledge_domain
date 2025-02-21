@@ -7,7 +7,7 @@
 @prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services/> .
 @prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions/> .
 
-@prefix spm_cloud_providers: <http://the-spm.org/entities/cloud_providers/> .
+@prefix spm_cloud_providers: <http://the-spm.org/entities/cloud_providers#> .
 
 # Cloud Providers
 
