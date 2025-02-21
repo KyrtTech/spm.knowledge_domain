@@ -169,6 +169,7 @@ spm:regionName a rdf:Propery ;
 # Extend the general GeoRegion class for AWS-specific regions
 spm:AWSRegion a rdfs:Class ;
     rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
+    rdfs:label "Region" ;
     rdfs:comment "Represents a geographic region specifically operated by AWS." .
 
 # Property for region operational status
