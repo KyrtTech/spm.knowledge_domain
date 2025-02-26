@@ -6,7 +6,7 @@
 @prefix spm: <http://the-spm.org/schema#> .
 @prefix schema: <http://schema.org/> .
 
-@prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
+@prefix spm_platforms: <http://the-spm.org/entities/platforms#> .
 
 # NodeJS
 
