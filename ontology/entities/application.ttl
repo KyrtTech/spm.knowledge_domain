@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
 @prefix spm_apps: <http://the-spm.org/entities/apps#> .
@@ -14,9 +15,11 @@ spm_apps:AWSCli a spm:SemanticVersioningApplication ;
 spm_apps:Redis a spm:SemanticVersioningApplication ;
     dcterms:title "Redis" ;
     spm:hasSemanticVersion "7.2.5" ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg> ;
     dcterms:description "Redis is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
 
 spm_apps:Postgres a spm:SemanticVersioningApplication ;
     dcterms:title "Postgres" ;
     spm:hasSemanticVersion "16.3" ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg> ;
     dcterms:description "Postgres is an relational database" .
