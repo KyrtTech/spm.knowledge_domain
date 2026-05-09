@@ -20,7 +20,7 @@ spm_platforms:NodeJS16 a spm:DevelopmentPlatform ;
     spm:hasSemanticVersion "16.0.0" ;
     spm:releaseDate "2021-04-20"^^xsd:date ;
     spm:endOfLifeDate "2024-04-30"^^xsd:date ;
-    spm:belongsToFamily spm_platforms:NodeJS ;
+    spm:platformBelongsToFamily spm_platforms:NodeJS ;
     dcterms:creator "OpenJS Foundation" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg> ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .
@@ -31,7 +31,7 @@ spm_platforms:NodeJS18 a spm:DevelopmentPlatform ;
     spm:hasSemanticVersion "18.19.0" ;
     spm:releaseDate "2023-11-29"^^xsd:date ;
     spm:endOfLifeDate "2025-04-30"^^xsd:date ;
-    spm:belongsToFamily spm_platforms:NodeJS ;
+    spm:platformBelongsToFamily spm_platforms:NodeJS ;
     dcterms:creator "OpenJS Foundation" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg> ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .
@@ -42,7 +42,7 @@ spm_platforms:NodeJS20 a spm:DevelopmentPlatform ;
     spm:hasSemanticVersion "20.11.0" ;
     spm:releaseDate "2024-01-09"^^xsd:date ;
     spm:endOfLifeDate "2026-04-30"^^xsd:date ;
-    spm:belongsToFamily spm_platforms:NodeJS ;
+    spm:platformBelongsToFamily spm_platforms:NodeJS ;
     dcterms:creator "OpenJS Foundation" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg> ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .

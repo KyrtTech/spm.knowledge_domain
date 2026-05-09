@@ -68,11 +68,12 @@ spm:OperatingSystem a rdfs:Class ;
     rdfs:label "Operating System" ;
     rdfs:comment "An operating system that serves as the foundational software that manages computer hardware and software resources and provides common services for computer programs." .
 
-# Property linking Operating System to its Family
-spm:belongsToFamily a rdf:Property ;
-    rdfs:domain spm:OperatingSystem ;  # Assuming spm:OperatingSystem is already defined
+# Property linking an operating system to its family (distinct from platform family — see spm:platformBelongsToFamily)
+spm:osBelongsToFamily a rdf:Property ;
+    rdfs:label "OS belongs to family" ;
+    rdfs:domain spm:OperatingSystem ;
     rdfs:range spm:OperatingSystemFamily ;
-    rdfs:comment "Indicates the family to which the operating system belongs." .
+    rdfs:comment "Indicates the operating-system family to which this OS belongs." .
 
 # DevelopmentPlatformFamily
 spm:DevelopmentPlatformFamily a rdfs:Class ;
@@ -89,9 +90,11 @@ spm:dependsOn a rdf:Property ;
     rdfs:domain spm:DevelopmentPlatform ;
     rdfs:range spm:OperatingSystem .
 
-spm:belongsToFamily a rdf:Property ;
+spm:platformBelongsToFamily a rdf:Property ;
+    rdfs:label "Platform belongs to family" ;
     rdfs:domain spm:DevelopmentPlatform ;
-    rdfs:range spm:DevelopmentPlatformFamily .
+    rdfs:range spm:DevelopmentPlatformFamily ;
+    rdfs:comment "Indicates the development-platform family to which this platform belongs." .
 
 # Define PackageManager as a subclass of SemanticVersioningApplication
 spm:PackageManager a rdfs:Class ;
