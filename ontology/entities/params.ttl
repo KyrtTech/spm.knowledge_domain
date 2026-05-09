@@ -3,7 +3,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix spm: <http://the-spm.org/schema#> .
 
-@prefix spm_params: <http://the-spm.org/entities/params/> .
+@prefix spm_params: <http://the-spm.org/entities/params#> .
 
 # Instances of Parameter
 

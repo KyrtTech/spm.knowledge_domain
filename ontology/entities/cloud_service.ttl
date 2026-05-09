@@ -1,7 +1,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
-@prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services/> .
+@prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services#> .
 
 # Specific Cloud Services as instances of CloudServiceType
 spm_cloud_service:ComputeService a spm:CloudServiceType ;

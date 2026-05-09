@@ -4,7 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
-@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions/> .
+@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions#> .
 
 # Define continents and some sub-regions as instances of GeoRegion
 spm_geo_regions:NorthAmerica a spm:GeoRegion ;

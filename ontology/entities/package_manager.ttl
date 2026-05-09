@@ -6,8 +6,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
-@prefix spm_platforms: <http://the-spm.org/entities/platforms/> .
-@prefix spm_package_managers: <http://the-spm.org/entities/package_managers/> .
+@prefix spm_platforms: <http://the-spm.org/entities/platforms#> .
+@prefix spm_package_managers: <http://the-spm.org/entities/package_managers#> .
 
 # npm
 spm_package_managers:npm8 a spm:PackageManager ;

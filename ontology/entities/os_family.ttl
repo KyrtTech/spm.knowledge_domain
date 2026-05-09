@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <http://schema.org/> .
 
-@prefix spm_os_family: <http://the-spm.org/entities/os_family/> .
+@prefix spm_os_family: <http://the-spm.org/entities/os_family#> .
 
 # Operating System Families
 spm_os_family:UnixLike a spm:OperatingSystemFamily ;

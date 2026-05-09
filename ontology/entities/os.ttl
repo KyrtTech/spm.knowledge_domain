@@ -5,9 +5,9 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix spm: <http://the-spm.org/schema#> .
 
-@prefix spm_os_family: <http://the-spm.org/entities/os_family/> .
+@prefix spm_os_family: <http://the-spm.org/entities/os_family#> .
 
-@prefix spm_os: <http://the-spm.org/entities/os/> .
+@prefix spm_os: <http://the-spm.org/entities/os#> .
 
 # Windows
 spm_os:Windows10 a spm:OperatingSystem ;

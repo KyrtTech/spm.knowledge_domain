@@ -2,10 +2,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <http://schema.org/> .
 @prefix spm: <http://the-spm.org/schema#> .
-@prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services/> .
-@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions/> .
+@prefix spm_cloud_service: <http://the-spm.org/entities/cloud_services#> .
+@prefix spm_geo_regions: <http://the-spm.org/entities/geo_regions#> .
 
 @prefix spm_cloud_providers: <http://the-spm.org/entities/cloud_providers#> .
 
