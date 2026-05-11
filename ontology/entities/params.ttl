@@ -93,6 +93,11 @@ spm_params:azureRegion a spm:Parameter ;
     spm:defaultValue "eastus" ;
     spm:paramDescription "The Azure region where resources are deployed and managed." .
 
+spm_params:hetznerLocation a spm:Parameter ;
+    spm:paramName "hetznerLocation" ;
+    spm:defaultValue "fsn1" ;
+    spm:paramDescription "The Hetzner Cloud location where resources are deployed (API location name)." .
+
 spm_params:ec2InstanceId a spm:Parameter ;
     spm:paramName "ec2InstanceId" ;
     spm:defaultValue "" ;

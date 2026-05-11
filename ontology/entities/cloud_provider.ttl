@@ -591,3 +591,44 @@ spm_cloud_providers:Azure a spm:CloudProvider ;
     spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:SouthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific, spm_geo_regions:Asia, spm_geo_regions:Africa, spm_geo_regions:MiddleEast, spm_geo_regions:Oceania ;
     spm:hasRegion spm_cloud_providers:azureAustraliaEast, spm_cloud_providers:azureAustraliaSoutheast, spm_cloud_providers:azureBrazilSouth, spm_cloud_providers:azureCanadaCentral, spm_cloud_providers:azureCanadaEast, spm_cloud_providers:azureCentralIndia, spm_cloud_providers:azureCentralUS, spm_cloud_providers:azureEastAsia, spm_cloud_providers:azureEastUS, spm_cloud_providers:azureEastUS2, spm_cloud_providers:azureFranceCentral, spm_cloud_providers:azureGermanyWestCentral, spm_cloud_providers:azureIsraelCentral, spm_cloud_providers:azureItalyNorth, spm_cloud_providers:azureJapanEast, spm_cloud_providers:azureJapanWest, spm_cloud_providers:azureKoreaCentral, spm_cloud_providers:azureMexicoCentral, spm_cloud_providers:azureNorthCentralUS, spm_cloud_providers:azureNorthEurope, spm_cloud_providers:azureNorwayEast, spm_cloud_providers:azurePolandCentral, spm_cloud_providers:azureQatarCentral, spm_cloud_providers:azureSouthAfricaNorth, spm_cloud_providers:azureSouthCentralUS, spm_cloud_providers:azureSouthIndia, spm_cloud_providers:azureSoutheastAsia, spm_cloud_providers:azureSpainCentral, spm_cloud_providers:azureSwedenCentral, spm_cloud_providers:azureSwitzerlandNorth, spm_cloud_providers:azureUAENorth, spm_cloud_providers:azureUKSouth, spm_cloud_providers:azureUKWest, spm_cloud_providers:azureWestCentralUS, spm_cloud_providers:azureWestEurope, spm_cloud_providers:azureWestUS, spm_cloud_providers:azureWestUS2, spm_cloud_providers:azureWestUS3 ;
     spm:infrastructureHasConfigParameter spm:AzureRegion .
+
+# Hetzner Cloud locations (https://docs.hetzner.com/cloud/general/locations/)
+spm_cloud_providers:hetznerFsn1 a spm:HetznerLocation ;
+    dcterms:title "Falkenstein" ;
+    spm:hetznerLocationName "fsn1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:hetznerNbg1 a spm:HetznerLocation ;
+    dcterms:title "Nuremberg" ;
+    spm:hetznerLocationName "nbg1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:hetznerHel1 a spm:HetznerLocation ;
+    dcterms:title "Helsinki" ;
+    spm:hetznerLocationName "hel1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:hetznerAsh a spm:HetznerLocation ;
+    dcterms:title "Ashburn" ;
+    spm:hetznerLocationName "ash" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:hetznerHil a spm:HetznerLocation ;
+    dcterms:title "Hillsboro" ;
+    spm:hetznerLocationName "hil" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:hetznerSin a spm:HetznerLocation ;
+    dcterms:title "Singapore" ;
+    spm:hetznerLocationName "sin" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:Hetzner a spm:CloudProvider ;
+    dcterms:title "Hetzner Cloud" ;
+    dcterms:description "Hetzner Cloud provides virtual machines, networking, and storage for deploying applications in European, US, and Asia-Pacific data centers." ;
+    foaf:homepage <https://www.hetzner.com/cloud> ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/0/0c/Logo_Hetzner.svg> ;
+    spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService ;
+    spm:operatesInGeoRegion spm_geo_regions:Europe, spm_geo_regions:NorthAmerica, spm_geo_regions:Asia, spm_geo_regions:AsiaPacific ;
+    spm:hasRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerAsh, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin ;
+    spm:infrastructureHasConfigParameter spm:HetznerLocation .

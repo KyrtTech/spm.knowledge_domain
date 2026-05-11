@@ -214,6 +214,17 @@ spm:azureRegionName a rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:comment "Azure resource manager region name (e.g. eastus)." .
 
+spm:HetznerLocation a rdfs:Class ;
+    rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
+    rdfs:label "Hetzner Cloud location" ;
+    rdfs:comment "A Hetzner Cloud location (API name location); used when creating servers and other resources." .
+
+spm:hetznerLocationName a rdf:Property ;
+    rdfs:label "Hetzner location id" ;
+    rdfs:domain spm:HetznerLocation ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Hetzner Cloud API location name (e.g. fsn1, nbg1)." .
+
 # Property for availability zone of the subnet
 spm:inAvailabilityZone a rdf:Property ;
     rdfs:domain spm:Subnet ;
