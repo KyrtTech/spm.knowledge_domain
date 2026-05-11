@@ -10,7 +10,7 @@
 
 @prefix spm_apps: <http://the-spm.org/entities/apps#> .
 
-@prefix spm_install_strategy: <http://the-spm.org/entities/install-strategies#> .
+@prefix spm_install_strategy: <http://the-spm.org/entities/install_strategies#> .
 
 
 # Assuming the existence of ConfigParams relevant to the Node 18 install on AWS
