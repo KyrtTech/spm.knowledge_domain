@@ -83,6 +83,16 @@ spm_params:awsRegion a spm:Parameter ;
     spm:defaultValue "us-east-1" ;  # Default to North Virginia; adjust as needed
     spm:paramDescription "The AWS region where resources are deployed and managed." .
 
+spm_params:gcpRegion a spm:Parameter ;
+    spm:paramName "gcpRegion" ;
+    spm:defaultValue "us-central1" ;
+    spm:paramDescription "The Google Cloud region where resources are deployed and managed." .
+
+spm_params:azureRegion a spm:Parameter ;
+    spm:paramName "azureRegion" ;
+    spm:defaultValue "eastus" ;
+    spm:paramDescription "The Azure region where resources are deployed and managed." .
+
 spm_params:ec2InstanceId a spm:Parameter ;
     spm:paramName "ec2InstanceId" ;
     spm:defaultValue "" ;

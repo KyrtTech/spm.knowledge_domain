@@ -15,7 +15,7 @@ spm_apps:AWSCli a spm:SemanticVersioningApplication ;
 spm_apps:Redis a spm:SemanticVersioningApplication ;
     dcterms:title "Redis" ;
     spm:hasSemanticVersion "7.2.5" ;
-    schema:logo <https://upload.wikimedia.org/wikipedia/commons/6/64/Logo-redis.svg> ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/e/ee/Redis_logo.svg> ;
     dcterms:description "Redis is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
 
 spm_apps:Postgres a spm:SemanticVersioningApplication ;

@@ -169,18 +169,50 @@ spm:regionName a rdf:Propery ;
     rdfs:range xsd:string ;
     rdfs:comment "The name of the region" .
 
+spm:regionOptStatus a rdf:Property ;
+    rdfs:label "Region operational status" ;
+    rdfs:domain spm:GeoRegion ;
+    rdfs:range xsd:string ;
+    rdfs:comment "For provider-specific cloud regions, indicates availability (e.g. ENABLED_BY_DEFAULT, DISABLED). Optional on broad geographic regions." .
+
+spm:hasRegion a rdf:Property ;
+    rdfs:domain spm:CloudProvider ;
+    rdfs:range spm:GeoRegion ;
+    rdfs:comment "Geographic or cloud API regions offered by this cloud provider." .
+
 # Extend the general GeoRegion class for AWS-specific regions
 spm:AWSRegion a rdfs:Class ;
     rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
-    rdfs:label "Region" ;
+    rdfs:label "AWS region" ;
     rdfs:comment "Represents a geographic region specifically operated by AWS." .
 
-# Property for region operational status
-spm:awsRegionOptStatus a rdf:Property ;
-    rdfs:label "Region Operational Status" ;
+spm:awsRegionName a rdf:Property ;
+    rdfs:label "AWS region id" ;
     rdfs:domain spm:AWSRegion ;
     rdfs:range xsd:string ;
-    rdfs:comment "Indicates the operational status of a cloud region, such as 'ENABLED_BY_DEFAULT', 'DISABLED'" .
+    rdfs:comment "AWS API region identifier (e.g. us-east-1)." .
+
+spm:GCPRegion a rdfs:Class ;
+    rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
+    rdfs:label "GCP region" ;
+    rdfs:comment "Represents a geographic region operated by Google Cloud Platform." .
+
+spm:gcpRegionName a rdf:Property ;
+    rdfs:label "GCP region id" ;
+    rdfs:domain spm:GCPRegion ;
+    rdfs:range xsd:string ;
+    rdfs:comment "GCP API region identifier (e.g. us-central1)." .
+
+spm:AzureRegion a rdfs:Class ;
+    rdfs:subClassOf spm:GeoRegion, spm:ConfigParameter ;
+    rdfs:label "Azure region" ;
+    rdfs:comment "Represents a geographic region operated by Microsoft Azure." .
+
+spm:azureRegionName a rdf:Property ;
+    rdfs:label "Azure region name" ;
+    rdfs:domain spm:AzureRegion ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Azure resource manager region name (e.g. eastus)." .
 
 # Property for availability zone of the subnet
 spm:inAvailabilityZone a rdf:Property ;

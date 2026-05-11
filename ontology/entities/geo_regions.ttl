@@ -19,6 +19,10 @@ spm_geo_regions:Europe a spm:GeoRegion ;
 spm_geo_regions:Asia a spm:GeoRegion ;
     dcterms:title "Asia" .
 
+spm_geo_regions:AsiaPacific a spm:GeoRegion ;
+    dcterms:title "Asia-Pacific" ;
+    rdfs:comment "Broad Asia-Pacific macro-region used for cloud provider coverage." .
+
 spm_geo_regions:Africa a spm:GeoRegion ;
     dcterms:title "Africa" .
 

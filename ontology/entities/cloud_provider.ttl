@@ -16,152 +16,529 @@
 spm_cloud_providers:awsAfSouth1 a spm:AWSRegion ;
     dcterms:title "Africa (Cape Town)" ;
     spm:awsRegionName "af-south-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsApEast1 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Hong Kong)" ;
     spm:awsRegionName "ap-east-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsApNortheast1 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Tokyo)" ;
     spm:awsRegionName "ap-northeast-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApNortheast2 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Seoul)" ;
     spm:awsRegionName "ap-northeast-2" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApNortheast3 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Osaka)" ;
     spm:awsRegionName "ap-northeast-3" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApSouth1 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Mumbai)" ;
     spm:awsRegionName "ap-south-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApSouth2 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Hyderabad)" ;
     spm:awsRegionName "ap-south-2" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsApSoutheast1 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Singapore)" ;
     spm:awsRegionName "ap-southeast-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApSoutheast2 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Sydney)" ;
     spm:awsRegionName "ap-southeast-2" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsApSoutheast3 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Jakarta)" ;
     spm:awsRegionName "ap-southeast-3" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsApSoutheast4 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Melbourne)" ;
     spm:awsRegionName "ap-southeast-4" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsApSoutheast5 a spm:AWSRegion ;
     dcterms:title "Asia Pacific (Malaysia)" ;
     spm:awsRegionName "ap-southeast-5" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsEuCentral1 a spm:AWSRegion ;
     dcterms:title "Europe (Frankfurt)" ;
     spm:awsRegionName "eu-central-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsEuCentral2 a spm:AWSRegion ;
     dcterms:title "Europe (Zurich)" ;
     spm:awsRegionName "eu-central-2" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsEuWest1 a spm:AWSRegion ;
     dcterms:title "Europe (Ireland)" ;
     spm:awsRegionName "eu-west-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsEuWest2 a spm:AWSRegion ;
     dcterms:title "Europe (London)" ;
     spm:awsRegionName "eu-west-2" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsEuWest3 a spm:AWSRegion ;
     dcterms:title "Europe (Paris)" ;
     spm:awsRegionName "eu-west-3" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsEuSouth1 a spm:AWSRegion ;
     dcterms:title "Europe (Milan)" ;
     spm:awsRegionName "eu-south-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsEuSouth2 a spm:AWSRegion ;
     dcterms:title "Europe (Spain)" ;
     spm:awsRegionName "eu-south-2" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsEuNorth1 a spm:AWSRegion ;
     dcterms:title "Europe (Stockholm)" ;
     spm:awsRegionName "eu-north-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsCaCentral1 a spm:AWSRegion ;
     dcterms:title "Canada (Central)" ;
     spm:awsRegionName "ca-central-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsCaWest1 a spm:AWSRegion ;
     dcterms:title "Canada West (Calgary)" ;
     spm:awsRegionName "ca-west-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsUsEast1 a spm:AWSRegion ;
     dcterms:title "US East (N. Virginia)" ;
     spm:awsRegionName "us-east-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsUsEast2 a spm:AWSRegion ;
     dcterms:title "US East (Ohio)" ;
     spm:awsRegionName "us-east-2" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsUsWest1 a spm:AWSRegion ;
     dcterms:title "US West (N. California)" ;
     spm:awsRegionName "us-west-1" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsUsWest2 a spm:AWSRegion ;
     dcterms:title "US West (Oregon)" ;
     spm:awsRegionName "us-west-2" ;
-    spm:awsRegionOptStatus "ENABLED_BY_DEFAULT" .
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 spm_cloud_providers:awsIlCentral1 a spm:AWSRegion ;
     dcterms:title "Israel (Tel Aviv)" ;
     spm:awsRegionName "il-central-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsMeCentral1 a spm:AWSRegion ;
     dcterms:title "Middle East (UAE)" ;
     spm:awsRegionName "me-central-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsMeSouth1 a spm:AWSRegion ;
     dcterms:title "Middle East (Bahrain)" ;
     spm:awsRegionName "me-south-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
 
 spm_cloud_providers:awsSaEast1 a spm:AWSRegion ;
     dcterms:title "South America (São Paulo)" ;
     spm:awsRegionName "sa-east-1" ;
-    spm:awsRegionOptStatus "DISABLED" .
+    spm:regionOptStatus "DISABLED" .
+
+# GCP regions (https://cloud.google.com/about/locations)
+spm_cloud_providers:gcpAfricaSouth1 a spm:GCPRegion ;
+    dcterms:title "Johannesburg" ;
+    spm:gcpRegionName "africa-south1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaEast1 a spm:GCPRegion ;
+    dcterms:title "Changhua County" ;
+    spm:gcpRegionName "asia-east1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaEast2 a spm:GCPRegion ;
+    dcterms:title "Hong Kong" ;
+    spm:gcpRegionName "asia-east2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaNortheast1 a spm:GCPRegion ;
+    dcterms:title "Tokyo" ;
+    spm:gcpRegionName "asia-northeast1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaNortheast2 a spm:GCPRegion ;
+    dcterms:title "Osaka" ;
+    spm:gcpRegionName "asia-northeast2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaNortheast3 a spm:GCPRegion ;
+    dcterms:title "Seoul" ;
+    spm:gcpRegionName "asia-northeast3" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaSouth1 a spm:GCPRegion ;
+    dcterms:title "Mumbai" ;
+    spm:gcpRegionName "asia-south1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaSouth2 a spm:GCPRegion ;
+    dcterms:title "Delhi" ;
+    spm:gcpRegionName "asia-south2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaSoutheast1 a spm:GCPRegion ;
+    dcterms:title "Singapore" ;
+    spm:gcpRegionName "asia-southeast1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAsiaSoutheast2 a spm:GCPRegion ;
+    dcterms:title "Jakarta" ;
+    spm:gcpRegionName "asia-southeast2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAustraliaSoutheast1 a spm:GCPRegion ;
+    dcterms:title "Sydney" ;
+    spm:gcpRegionName "australia-southeast1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpAustraliaSoutheast2 a spm:GCPRegion ;
+    dcterms:title "Melbourne" ;
+    spm:gcpRegionName "australia-southeast2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeCentral2 a spm:GCPRegion ;
+    dcterms:title "Warsaw" ;
+    spm:gcpRegionName "europe-central2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeNorth1 a spm:GCPRegion ;
+    dcterms:title "Finland" ;
+    spm:gcpRegionName "europe-north1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeSouthwest1 a spm:GCPRegion ;
+    dcterms:title "Madrid" ;
+    spm:gcpRegionName "europe-southwest1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest1 a spm:GCPRegion ;
+    dcterms:title "Belgium" ;
+    spm:gcpRegionName "europe-west1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest2 a spm:GCPRegion ;
+    dcterms:title "London" ;
+    spm:gcpRegionName "europe-west2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest3 a spm:GCPRegion ;
+    dcterms:title "Frankfurt" ;
+    spm:gcpRegionName "europe-west3" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest4 a spm:GCPRegion ;
+    dcterms:title "Netherlands" ;
+    spm:gcpRegionName "europe-west4" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest6 a spm:GCPRegion ;
+    dcterms:title "Zurich" ;
+    spm:gcpRegionName "europe-west6" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest8 a spm:GCPRegion ;
+    dcterms:title "Milan" ;
+    spm:gcpRegionName "europe-west8" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpEuropeWest9 a spm:GCPRegion ;
+    dcterms:title "Paris" ;
+    spm:gcpRegionName "europe-west9" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpMeCentral1 a spm:GCPRegion ;
+    dcterms:title "Doha" ;
+    spm:gcpRegionName "me-central1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpMeCentral2 a spm:GCPRegion ;
+    dcterms:title "Dammam" ;
+    spm:gcpRegionName "me-central2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpMeWest1 a spm:GCPRegion ;
+    dcterms:title "Tel Aviv" ;
+    spm:gcpRegionName "me-west1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpNorthamericaNortheast1 a spm:GCPRegion ;
+    dcterms:title "Montreal" ;
+    spm:gcpRegionName "northamerica-northeast1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpNorthamericaNortheast2 a spm:GCPRegion ;
+    dcterms:title "Toronto" ;
+    spm:gcpRegionName "northamerica-northeast2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpSouthamericaEast1 a spm:GCPRegion ;
+    dcterms:title "São Paulo" ;
+    spm:gcpRegionName "southamerica-east1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsCentral1 a spm:GCPRegion ;
+    dcterms:title "Iowa" ;
+    spm:gcpRegionName "us-central1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsEast1 a spm:GCPRegion ;
+    dcterms:title "South Carolina" ;
+    spm:gcpRegionName "us-east1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsEast4 a spm:GCPRegion ;
+    dcterms:title "Northern Virginia" ;
+    spm:gcpRegionName "us-east4" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsEast5 a spm:GCPRegion ;
+    dcterms:title "Columbus" ;
+    spm:gcpRegionName "us-east5" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsSouth1 a spm:GCPRegion ;
+    dcterms:title "Dallas" ;
+    spm:gcpRegionName "us-south1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsWest1 a spm:GCPRegion ;
+    dcterms:title "Oregon" ;
+    spm:gcpRegionName "us-west1" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsWest2 a spm:GCPRegion ;
+    dcterms:title "Los Angeles" ;
+    spm:gcpRegionName "us-west2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsWest3 a spm:GCPRegion ;
+    dcterms:title "Salt Lake City" ;
+    spm:gcpRegionName "us-west3" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:gcpUsWest4 a spm:GCPRegion ;
+    dcterms:title "Las Vegas" ;
+    spm:gcpRegionName "us-west4" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+# Azure regions (https://azure.microsoft.com/explore/global-infrastructure/geographies/)
+spm_cloud_providers:azureAustraliaEast a spm:AzureRegion ;
+    dcterms:title "Australia East" ;
+    spm:azureRegionName "australiaeast" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureAustraliaSoutheast a spm:AzureRegion ;
+    dcterms:title "Australia Southeast" ;
+    spm:azureRegionName "australiasoutheast" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureBrazilSouth a spm:AzureRegion ;
+    dcterms:title "Brazil South" ;
+    spm:azureRegionName "brazilsouth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureCanadaCentral a spm:AzureRegion ;
+    dcterms:title "Canada Central" ;
+    spm:azureRegionName "canadacentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureCanadaEast a spm:AzureRegion ;
+    dcterms:title "Canada East" ;
+    spm:azureRegionName "canadaeast" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureCentralIndia a spm:AzureRegion ;
+    dcterms:title "Central India" ;
+    spm:azureRegionName "centralindia" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureCentralUS a spm:AzureRegion ;
+    dcterms:title "Central US" ;
+    spm:azureRegionName "centralus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureEastAsia a spm:AzureRegion ;
+    dcterms:title "East Asia" ;
+    spm:azureRegionName "eastasia" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureEastUS a spm:AzureRegion ;
+    dcterms:title "East US" ;
+    spm:azureRegionName "eastus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureEastUS2 a spm:AzureRegion ;
+    dcterms:title "East US 2" ;
+    spm:azureRegionName "eastus2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureFranceCentral a spm:AzureRegion ;
+    dcterms:title "France Central" ;
+    spm:azureRegionName "francecentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureGermanyWestCentral a spm:AzureRegion ;
+    dcterms:title "Germany West Central" ;
+    spm:azureRegionName "germanywestcentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureIsraelCentral a spm:AzureRegion ;
+    dcterms:title "Israel Central" ;
+    spm:azureRegionName "israelcentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureItalyNorth a spm:AzureRegion ;
+    dcterms:title "Italy North" ;
+    spm:azureRegionName "italynorth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureJapanEast a spm:AzureRegion ;
+    dcterms:title "Japan East" ;
+    spm:azureRegionName "japaneast" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureJapanWest a spm:AzureRegion ;
+    dcterms:title "Japan West" ;
+    spm:azureRegionName "japanwest" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureKoreaCentral a spm:AzureRegion ;
+    dcterms:title "Korea Central" ;
+    spm:azureRegionName "koreacentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureMexicoCentral a spm:AzureRegion ;
+    dcterms:title "Mexico Central" ;
+    spm:azureRegionName "mexicocentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureNorthCentralUS a spm:AzureRegion ;
+    dcterms:title "North Central US" ;
+    spm:azureRegionName "northcentralus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureNorthEurope a spm:AzureRegion ;
+    dcterms:title "North Europe" ;
+    spm:azureRegionName "northeurope" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureNorwayEast a spm:AzureRegion ;
+    dcterms:title "Norway East" ;
+    spm:azureRegionName "norwayeast" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azurePolandCentral a spm:AzureRegion ;
+    dcterms:title "Poland Central" ;
+    spm:azureRegionName "polandcentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureQatarCentral a spm:AzureRegion ;
+    dcterms:title "Qatar Central" ;
+    spm:azureRegionName "qatarcentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSouthAfricaNorth a spm:AzureRegion ;
+    dcterms:title "South Africa North" ;
+    spm:azureRegionName "southafricanorth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSouthCentralUS a spm:AzureRegion ;
+    dcterms:title "South Central US" ;
+    spm:azureRegionName "southcentralus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSouthIndia a spm:AzureRegion ;
+    dcterms:title "South India" ;
+    spm:azureRegionName "southindia" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSoutheastAsia a spm:AzureRegion ;
+    dcterms:title "Southeast Asia" ;
+    spm:azureRegionName "southeastasia" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSpainCentral a spm:AzureRegion ;
+    dcterms:title "Spain Central" ;
+    spm:azureRegionName "spaincentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSwedenCentral a spm:AzureRegion ;
+    dcterms:title "Sweden Central" ;
+    spm:azureRegionName "swedencentral" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureSwitzerlandNorth a spm:AzureRegion ;
+    dcterms:title "Switzerland North" ;
+    spm:azureRegionName "switzerlandnorth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureUAENorth a spm:AzureRegion ;
+    dcterms:title "UAE North" ;
+    spm:azureRegionName "uaenorth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureUKSouth a spm:AzureRegion ;
+    dcterms:title "UK South" ;
+    spm:azureRegionName "uksouth" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureUKWest a spm:AzureRegion ;
+    dcterms:title "UK West" ;
+    spm:azureRegionName "ukwest" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureWestCentralUS a spm:AzureRegion ;
+    dcterms:title "West Central US" ;
+    spm:azureRegionName "westcentralus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureWestEurope a spm:AzureRegion ;
+    dcterms:title "West Europe" ;
+    spm:azureRegionName "westeurope" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureWestUS a spm:AzureRegion ;
+    dcterms:title "West US" ;
+    spm:azureRegionName "westus" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureWestUS2 a spm:AzureRegion ;
+    dcterms:title "West US 2" ;
+    spm:azureRegionName "westus2" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
+
+spm_cloud_providers:azureWestUS3 a spm:AzureRegion ;
+    dcterms:title "West US 3" ;
+    spm:azureRegionName "westus3" ;
+    spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
 
 # Class for AWS VPC
@@ -201,7 +578,9 @@ spm_cloud_providers:GCP a spm:CloudProvider ;
     foaf:homepage <https://cloud.google.com/> ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:SouthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific, spm_geo_regions:Asia, spm_geo_regions:Africa, spm_geo_regions:MiddleEast, spm_geo_regions:Oceania ;
+    spm:hasRegion spm_cloud_providers:gcpAfricaSouth1, spm_cloud_providers:gcpAsiaEast1, spm_cloud_providers:gcpAsiaEast2, spm_cloud_providers:gcpAsiaNortheast1, spm_cloud_providers:gcpAsiaNortheast2, spm_cloud_providers:gcpAsiaNortheast3, spm_cloud_providers:gcpAsiaSouth1, spm_cloud_providers:gcpAsiaSouth2, spm_cloud_providers:gcpAsiaSoutheast1, spm_cloud_providers:gcpAsiaSoutheast2, spm_cloud_providers:gcpAustraliaSoutheast1, spm_cloud_providers:gcpAustraliaSoutheast2, spm_cloud_providers:gcpEuropeCentral2, spm_cloud_providers:gcpEuropeNorth1, spm_cloud_providers:gcpEuropeSouthwest1, spm_cloud_providers:gcpEuropeWest1, spm_cloud_providers:gcpEuropeWest2, spm_cloud_providers:gcpEuropeWest3, spm_cloud_providers:gcpEuropeWest4, spm_cloud_providers:gcpEuropeWest6, spm_cloud_providers:gcpEuropeWest8, spm_cloud_providers:gcpEuropeWest9, spm_cloud_providers:gcpMeCentral1, spm_cloud_providers:gcpMeCentral2, spm_cloud_providers:gcpMeWest1, spm_cloud_providers:gcpNorthamericaNortheast1, spm_cloud_providers:gcpNorthamericaNortheast2, spm_cloud_providers:gcpSouthamericaEast1, spm_cloud_providers:gcpUsCentral1, spm_cloud_providers:gcpUsEast1, spm_cloud_providers:gcpUsEast4, spm_cloud_providers:gcpUsEast5, spm_cloud_providers:gcpUsSouth1, spm_cloud_providers:gcpUsWest1, spm_cloud_providers:gcpUsWest2, spm_cloud_providers:gcpUsWest3, spm_cloud_providers:gcpUsWest4 ;
+    spm:infrastructureHasConfigParameter spm:GCPRegion .
 
 spm_cloud_providers:Azure a spm:CloudProvider ;
     dcterms:title "Microsoft Azure" ;
@@ -209,4 +588,6 @@ spm_cloud_providers:Azure a spm:CloudProvider ;
     foaf:homepage <https://azure.microsoft.com/> ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg> ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService, spm_cloud_service:DatabaseService, spm_cloud_service:MachineLearningService, spm_cloud_service:CDN ;
-    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific .
+    spm:operatesInGeoRegion spm_geo_regions:NorthAmerica, spm_geo_regions:SouthAmerica, spm_geo_regions:Europe, spm_geo_regions:AsiaPacific, spm_geo_regions:Asia, spm_geo_regions:Africa, spm_geo_regions:MiddleEast, spm_geo_regions:Oceania ;
+    spm:hasRegion spm_cloud_providers:azureAustraliaEast, spm_cloud_providers:azureAustraliaSoutheast, spm_cloud_providers:azureBrazilSouth, spm_cloud_providers:azureCanadaCentral, spm_cloud_providers:azureCanadaEast, spm_cloud_providers:azureCentralIndia, spm_cloud_providers:azureCentralUS, spm_cloud_providers:azureEastAsia, spm_cloud_providers:azureEastUS, spm_cloud_providers:azureEastUS2, spm_cloud_providers:azureFranceCentral, spm_cloud_providers:azureGermanyWestCentral, spm_cloud_providers:azureIsraelCentral, spm_cloud_providers:azureItalyNorth, spm_cloud_providers:azureJapanEast, spm_cloud_providers:azureJapanWest, spm_cloud_providers:azureKoreaCentral, spm_cloud_providers:azureMexicoCentral, spm_cloud_providers:azureNorthCentralUS, spm_cloud_providers:azureNorthEurope, spm_cloud_providers:azureNorwayEast, spm_cloud_providers:azurePolandCentral, spm_cloud_providers:azureQatarCentral, spm_cloud_providers:azureSouthAfricaNorth, spm_cloud_providers:azureSouthCentralUS, spm_cloud_providers:azureSouthIndia, spm_cloud_providers:azureSoutheastAsia, spm_cloud_providers:azureSpainCentral, spm_cloud_providers:azureSwedenCentral, spm_cloud_providers:azureSwitzerlandNorth, spm_cloud_providers:azureUAENorth, spm_cloud_providers:azureUKSouth, spm_cloud_providers:azureUKWest, spm_cloud_providers:azureWestCentralUS, spm_cloud_providers:azureWestEurope, spm_cloud_providers:azureWestUS, spm_cloud_providers:azureWestUS2, spm_cloud_providers:azureWestUS3 ;
+    spm:infrastructureHasConfigParameter spm:AzureRegion .
