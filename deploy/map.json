@@ -1,0 +1,14 @@
+{
+    "schema.ttl": "schema",
+    "entities/application.ttl": "entities/app",
+    "entities/cloud_provider.ttl": "entities/cloud-providers",
+    "entities/cloud_service.ttl": "entities/cloud-services",
+    "entities/infra_provider.ttl": "entities/infra-providers",
+    "entities/package_manager.ttl": "entities/package-managers",
+    "entities/runner.ttl": "entities/runners",
+    "entities/service.ttl": "entities/services",
+    "entities/install_strategy.ttl": "entities/install-strategies",
+    "entities/params.ttl": "entities/params",
+    "entities/os.ttl": "entities/os",
+    "entities/os_family.ttl": "entities/os-family"
+}
