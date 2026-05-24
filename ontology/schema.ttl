@@ -9,7 +9,6 @@
 # Class that inherits from schema:SoftwareApplication
 spm:SemanticVersioningApplication a rdfs:Class ;
     rdfs:subClassOf schema:SoftwareApplication .
-
 # Property to represent semantic versioning
 spm:hasSemanticVersion a rdf:Property ;
     rdfs:label "Semantic Version" ;
@@ -43,6 +42,44 @@ spm:dependsOnSemanticApp a rdf:Property ;
     rdfs:comment "Indicates a dependency of this semantic app on another semantic app." ;
     rdfs:domain spm:SemanticVersioningApplication ;
     rdfs:range spm:SemanticVersioningApplication .
+
+spm:ApplicationFamily a rdfs:Class ;
+    rdfs:subClassOf schema:SoftwareApplication ;
+    rdfs:comment "A product/application family independent of a specific release version." .
+
+spm:applicationBelongsToFamily a rdf:Property ;
+    rdfs:label "Application belongs to family" ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range spm:ApplicationFamily ;
+    rdfs:comment "Links a concrete versioned application to its version-independent application family." .
+
+spm:ApplicationDependencyRequirement a rdfs:Class ;
+    rdfs:comment "A dependency requirement against an application family, optionally constrained by a semantic-version range." .
+
+spm:dependsOnApplicationRequirement a rdf:Property ;
+    rdfs:domain spm:SemanticVersioningApplication ;
+    rdfs:range spm:ApplicationDependencyRequirement ;
+    rdfs:comment "Links an application or service to a family-level dependency requirement." .
+
+spm:requiresApplicationFamily a rdf:Property ;
+    rdfs:domain spm:ApplicationDependencyRequirement ;
+    rdfs:range spm:ApplicationFamily ;
+    rdfs:comment "The application family required by a dependency requirement." .
+
+spm:minSemanticVersion a rdf:Property ;
+    rdfs:domain spm:ApplicationDependencyRequirement ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Inclusive minimum semantic version accepted by a dependency requirement." .
+
+spm:maxSemanticVersion a rdf:Property ;
+    rdfs:domain spm:ApplicationDependencyRequirement ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Exclusive maximum semantic version accepted by a dependency requirement." .
+
+spm:versionConstraint a rdf:Property ;
+    rdfs:domain spm:ApplicationDependencyRequirement ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A semantic-version range expression for a dependency requirement, for example '>=7.0 <8.0'." .
 
 spm:RemoteFileEntry a rdfs:Class ;
     rdfs:comment "A remote file entry. This can be used to represent a remote file structure." .
@@ -281,6 +318,11 @@ spm:onApplication a rdf:Property ;
     rdfs:domain spm:ParameterDependency ;
     rdfs:range  spm:SemanticVersioningApplication ;
     rdfs:comment "The semantic versioned app this dependency concerns." .
+
+spm:onApplicationRequirement a rdf:Property ;
+    rdfs:domain spm:ParameterDependency ;
+    rdfs:range spm:ApplicationDependencyRequirement ;
+    rdfs:comment "The family-level application dependency requirement this parameter dependency concerns." .
 
 # Property to specify the required value
 spm:minValue a rdf:Property ;

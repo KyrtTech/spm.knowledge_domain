@@ -12,14 +12,26 @@ spm_apps:AWSCli a spm:SemanticVersioningApplication ;
     spm:hasSemanticVersion "2.0.0" ;
     dcterms:description "The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services." .
 
-spm_apps:Redis a spm:SemanticVersioningApplication ;
+spm_apps:Redis a spm:ApplicationFamily ;
     dcterms:title "Redis" ;
-    spm:hasSemanticVersion "7.2.5" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/e/ee/Redis_logo.svg> ;
     dcterms:description "Redis is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
 
-spm_apps:Postgres a spm:SemanticVersioningApplication ;
+spm_apps:Redis7_2_5 a spm:SemanticVersioningApplication ;
+    dcterms:title "Redis" ;
+    spm:hasSemanticVersion "7.2.5" ;
+    spm:applicationBelongsToFamily spm_apps:Redis ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/e/ee/Redis_logo.svg> ;
+    dcterms:description "Redis 7.2.5 is an open-source, in-memory key-value data store, used as a database, cache, and message broker." .
+
+spm_apps:Postgres a spm:ApplicationFamily ;
+    dcterms:title "Postgres" ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg> ;
+    dcterms:description "Postgres is a relational database." .
+
+spm_apps:Postgres16_3 a spm:SemanticVersioningApplication ;
     dcterms:title "Postgres" ;
     spm:hasSemanticVersion "16.3" ;
+    spm:applicationBelongsToFamily spm_apps:Postgres ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg> ;
-    dcterms:description "Postgres is an relational database" .
+    dcterms:description "Postgres 16.3 is a relational database." .
