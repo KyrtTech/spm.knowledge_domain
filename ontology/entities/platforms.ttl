@@ -46,3 +46,49 @@ spm_platforms:NodeJS20 a spm:DevelopmentPlatform ;
     dcterms:creator "OpenJS Foundation" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg> ;
     foaf:homepage <https://nodejs.org/en/about/releases/> .
+
+# PHP
+
+# Dev Family
+spm_platforms:PHP a spm:DevelopmentPlatformFamily ;
+    dcterms:title "PHP".
+
+spm_platforms:PHP82 a spm:DevelopmentPlatform ;
+    dcterms:title "PHP 8.2"@en ;
+    spm:hasSemanticVersion "8.2.0" ;
+    spm:releaseDate "2022-12-08"^^xsd:date ;
+    spm:endOfLifeDate "2026-12-31"^^xsd:date ;
+    spm:platformBelongsToFamily spm_platforms:PHP ;
+    dcterms:creator "The PHP Group" ;
+    schema:logo <https://www.php.net/images/logos/new-php-logo.svg> ;
+    foaf:homepage <https://www.php.net/supported-versions.php> .
+
+spm_platforms:PHP83 a spm:DevelopmentPlatform ;
+    dcterms:title "PHP 8.3"@en ;
+    spm:hasSemanticVersion "8.3.0" ;
+    spm:releaseDate "2023-11-23"^^xsd:date ;
+    spm:endOfLifeDate "2027-12-31"^^xsd:date ;
+    spm:platformBelongsToFamily spm_platforms:PHP ;
+    dcterms:creator "The PHP Group" ;
+    schema:logo <https://www.php.net/images/logos/new-php-logo.svg> ;
+    foaf:homepage <https://www.php.net/supported-versions.php> .
+
+spm_platforms:PHP84 a spm:DevelopmentPlatform ;
+    dcterms:title "PHP 8.4"@en ;
+    spm:hasSemanticVersion "8.4.0" ;
+    spm:releaseDate "2024-11-21"^^xsd:date ;
+    spm:endOfLifeDate "2028-12-31"^^xsd:date ;
+    spm:platformBelongsToFamily spm_platforms:PHP ;
+    dcterms:creator "The PHP Group" ;
+    schema:logo <https://www.php.net/images/logos/new-php-logo.svg> ;
+    foaf:homepage <https://www.php.net/supported-versions.php> .
+
+spm_platforms:PHP85 a spm:DevelopmentPlatform ;
+    dcterms:title "PHP 8.5"@en ;
+    spm:hasSemanticVersion "8.5.0" ;
+    spm:releaseDate "2025-11-20"^^xsd:date ;
+    spm:endOfLifeDate "2029-12-31"^^xsd:date ;
+    spm:platformBelongsToFamily spm_platforms:PHP ;
+    dcterms:creator "The PHP Group" ;
+    schema:logo <https://www.php.net/images/logos/new-php-logo.svg> ;
+    foaf:homepage <https://www.php.net/supported-versions.php> .
