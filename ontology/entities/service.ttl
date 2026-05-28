@@ -70,3 +70,16 @@ spm_services:KuttPostgresStorage a spm:ParameterDependency ;
     spm:recommendedValue "200GB" .
 
 # END Kutt
+
+
+# Wordpress
+spm_services:Wordpress a spm:SoftwareService ;
+    dcterms:title "Wordpress" ;
+    schema:logo <https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg> ;
+    spm:hasSemanticVersion "7.0" ;
+    spm:dependsOnSemanticApp spm_platforms:PHP83 ;
+    #spm:dependsOnApplicationRequirement spm_services:KuttRedisRequirement, spm_services:KuttPostgresRequirement ;
+    #spm:serviceHasDependencyParameter spm_services:KuttNodeJS18vCPU, spm_services:KuttNodeJS18Storage, spm_services:KuttPostgresvCPU, spm_services:KuttPostgresStorage ;
+    spm:downloadURL "https://wordpress.org/wordpress-7.0.zip" ;
+    dcterms:description "WordPress is a web content management system. WordPress is written in the PHP programming language and paired with a MySQL or MariaDB database" .
+# END Wordpress
