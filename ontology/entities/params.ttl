@@ -98,10 +98,20 @@ spm_params:hetznerLocation a spm:Parameter ;
     spm:defaultValue "fsn1" ;
     spm:paramDescription "The Hetzner Cloud location where resources are deployed (API location name)." .
 
+spm_params:serverType a spm:Parameter ;
+    spm:paramName "serverType" ;
+    spm:defaultValue "cx23" ;
+    spm:paramDescription "The provider-specific server type or virtual-machine flavor used when creating a server." .
+
 spm_params:ec2InstanceId a spm:Parameter ;
     spm:paramName "ec2InstanceId" ;
     spm:defaultValue "" ;
     spm:paramDescription "The unique identifier of an EC2 instance." .
+
+spm_params:hcloudServerId a spm:Parameter ;
+    spm:paramName "hcloudServerId" ;
+    spm:defaultValue "" ;
+    spm:paramDescription "The unique identifier of a Hetzner Cloud server." .
 
 spm_params:jsonConfigFile a spm:Parameter ;
     spm:paramName "jsonConfigFile" ;
