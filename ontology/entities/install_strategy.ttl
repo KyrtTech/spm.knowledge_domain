@@ -51,6 +51,50 @@ spm_install_strategy:Node18GCP a spm:InstallStrategy ;
     spm:documentation <https://example.com/install-node20-aws> ;
     spm:executedOnRunner spm_runners:LinuxRunnerWithAWS .
 
+spm_install_strategy:PHP83Hetzner a spm:InstallStrategy ;
+    dcterms:title "Install PHP 8.3 on Hetzner" ;
+    dcterms:description "Creates an Ubuntu server on Hetzner Cloud and installs PHP 8.3 with common runtime extensions." ;
+    spm:targetsApplication spm_platforms:PHP83 ;
+    spm:usesInfrastructureProvider spm_cloud_providers:Hetzner ;
+    spm:optionalArgument spm_install_strategy:PHP83HetznerLocation, spm_install_strategy:PHP83HetznerServerType ;
+    spm:producesParam spm_params:sshConnectionString, spm_params:sshKey, spm_params:ip, spm_params:hcloudServerId ;
+    spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/PHP83Hetzner/install.sh> ;
+    spm:executedOnRunner spm_runners:LinuxRunnerWithHCloud .
+
+spm_install_strategy:PHP83HetznerLocation a spm:Argument ;
+    spm:argumentType spm_params:hetznerLocation ;
+    spm:argumentName "location" ;
+    spm:argumentDescription "Hetzner Cloud location where the Ubuntu server will be created. Defaults to fsn1." ;
+    spm:allowedValues spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerAsh, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_install_strategy:PHP83HetznerServerType a spm:Argument ;
+    spm:argumentType spm_params:serverType ;
+    spm:argumentName "serverType" ;
+    spm:argumentDescription "Hetzner Cloud server type for the PHP host. Defaults to cpx32." ;
+    spm:allowedValues spm_cloud_providers:cpx11, spm_cloud_providers:cpx21, spm_cloud_providers:cpx31, spm_cloud_providers:cpx41, spm_cloud_providers:cpx51, spm_cloud_providers:ccx13, spm_cloud_providers:ccx23, spm_cloud_providers:ccx33, spm_cloud_providers:ccx43, spm_cloud_providers:ccx53, spm_cloud_providers:ccx63, spm_cloud_providers:cpx12, spm_cloud_providers:cpx22, spm_cloud_providers:cpx32, spm_cloud_providers:cpx42, spm_cloud_providers:cpx52, spm_cloud_providers:cpx62 .
+
+spm_install_strategy:WordpressHetzner a spm:InstallStrategy ;
+    dcterms:title "Install Wordpress on Hetzner" ;
+    dcterms:description "Installs Wordpress on a Hetzner-hosted Ubuntu server with PHP 8.3, Apache, and local MariaDB." ;
+    spm:targetsApplication spm_services:Wordpress ;
+    spm:usesInfrastructureProvider spm_cloud_providers:Hetzner ;
+    spm:requiresArgument spm_install_strategy:WordpressHetznerSSHConnectionString, spm_install_strategy:WordpressHetznerSSHKey ;
+    spm:optionalArgument spm_install_strategy:WordpressHetznerDomainOrIp ;
+    spm:producesParam spm_params:url ;
+    spm:installScripts <https://raw.githubusercontent.com/KyrtTech/spm.install_strategies/master/WordpressHetzner/install.sh> ;
+    spm:executedOnRunner spm_runners:LinuxRunnerWithHCloud .
+
+spm_install_strategy:WordpressHetznerSSHConnectionString a spm:Argument ;
+    spm:argumentType spm_params:sshConnectionString .
+
+spm_install_strategy:WordpressHetznerSSHKey a spm:Argument ;
+    spm:argumentType spm_params:sshKey .
+
+spm_install_strategy:WordpressHetznerDomainOrIp a spm:Argument ;
+    spm:argumentType spm_params:domainOrIp ;
+    spm:argumentName "domain" ;
+    spm:argumentDescription "Domain name or IP address where Wordpress will be served. Defaults to the server IP." .
+
 spm_install_strategy:SuriInstall a spm:InstallStrategy ;
     dcterms:title "Install Suri on remote server using ssh" ;
     dcterms:description "Install strategy for Suri, requiring IP, SSH connection string, and SSH key." ;
