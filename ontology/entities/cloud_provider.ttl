@@ -623,6 +623,194 @@ spm_cloud_providers:hetznerSin a spm:HetznerLocation ;
     spm:hetznerLocationName "sin" ;
     spm:regionOptStatus "ENABLED_BY_DEFAULT" .
 
+# Hetzner Cloud server types, generated from currently orderable hcloud server-type values.
+spm_cloud_providers:cpx11 a spm:ServerType ;
+    dcterms:title "CPX 11" ;
+    spm:serverTypeName "cpx11" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 2 ;
+    spm:serverTypeMemoryGB "2"^^xsd:decimal ;
+    spm:serverTypeDiskGB 40 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerAsh, spm_cloud_providers:hetznerHil .
+
+spm_cloud_providers:cpx21 a spm:ServerType ;
+    dcterms:title "CPX 21" ;
+    spm:serverTypeName "cpx21" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 3 ;
+    spm:serverTypeMemoryGB "4"^^xsd:decimal ;
+    spm:serverTypeDiskGB 80 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerHil .
+
+spm_cloud_providers:cpx31 a spm:ServerType ;
+    dcterms:title "CPX 31" ;
+    spm:serverTypeName "cpx31" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 4 ;
+    spm:serverTypeMemoryGB "8"^^xsd:decimal ;
+    spm:serverTypeDiskGB 160 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerHil .
+
+spm_cloud_providers:cpx41 a spm:ServerType ;
+    dcterms:title "CPX 41" ;
+    spm:serverTypeName "cpx41" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 8 ;
+    spm:serverTypeMemoryGB "16"^^xsd:decimal ;
+    spm:serverTypeDiskGB 240 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerHil .
+
+spm_cloud_providers:cpx51 a spm:ServerType ;
+    dcterms:title "CPX 51" ;
+    spm:serverTypeName "cpx51" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 16 ;
+    spm:serverTypeMemoryGB "32"^^xsd:decimal ;
+    spm:serverTypeDiskGB 360 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerHil .
+
+spm_cloud_providers:ccx13 a spm:ServerType ;
+    dcterms:title "CCX13 Dedicated CPU" ;
+    spm:serverTypeName "ccx13" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 2 ;
+    spm:serverTypeMemoryGB "8"^^xsd:decimal ;
+    spm:serverTypeDiskGB 80 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerAsh, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:ccx23 a spm:ServerType ;
+    dcterms:title "CCX23 Dedicated CPU" ;
+    spm:serverTypeName "ccx23" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 4 ;
+    spm:serverTypeMemoryGB "16"^^xsd:decimal ;
+    spm:serverTypeDiskGB 160 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:ccx33 a spm:ServerType ;
+    dcterms:title "CCX33 Dedicated CPU" ;
+    spm:serverTypeName "ccx33" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 8 ;
+    spm:serverTypeMemoryGB "32"^^xsd:decimal ;
+    spm:serverTypeDiskGB 240 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:ccx43 a spm:ServerType ;
+    dcterms:title "CCX43 Dedicated CPU" ;
+    spm:serverTypeName "ccx43" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 16 ;
+    spm:serverTypeMemoryGB "64"^^xsd:decimal ;
+    spm:serverTypeDiskGB 360 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:ccx53 a spm:ServerType ;
+    dcterms:title "CCX53 Dedicated CPU" ;
+    spm:serverTypeName "ccx53" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 32 ;
+    spm:serverTypeMemoryGB "128"^^xsd:decimal ;
+    spm:serverTypeDiskGB 600 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:ccx63 a spm:ServerType ;
+    dcterms:title "CCX63 Dedicated CPU" ;
+    spm:serverTypeName "ccx63" ;
+    spm:serverTypeCategory "general_purpose" ;
+    spm:serverTypeCores 48 ;
+    spm:serverTypeMemoryGB "192"^^xsd:decimal ;
+    spm:serverTypeDiskGB 960 ;
+    spm:serverTypeCpuType "dedicated" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx12 a spm:ServerType ;
+    dcterms:title "CPX 12" ;
+    spm:serverTypeName "cpx12" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 1 ;
+    spm:serverTypeMemoryGB "2"^^xsd:decimal ;
+    spm:serverTypeDiskGB 40 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx22 a spm:ServerType ;
+    dcterms:title "CPX 22" ;
+    spm:serverTypeName "cpx22" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 2 ;
+    spm:serverTypeMemoryGB "4"^^xsd:decimal ;
+    spm:serverTypeDiskGB 80 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx32 a spm:ServerType ;
+    dcterms:title "CPX 32" ;
+    spm:serverTypeName "cpx32" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 4 ;
+    spm:serverTypeMemoryGB "8"^^xsd:decimal ;
+    spm:serverTypeDiskGB 160 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx42 a spm:ServerType ;
+    dcterms:title "CPX 42" ;
+    spm:serverTypeName "cpx42" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 8 ;
+    spm:serverTypeMemoryGB "16"^^xsd:decimal ;
+    spm:serverTypeDiskGB 320 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx52 a spm:ServerType ;
+    dcterms:title "CPX 52" ;
+    spm:serverTypeName "cpx52" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 12 ;
+    spm:serverTypeMemoryGB "24"^^xsd:decimal ;
+    spm:serverTypeDiskGB 480 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerSin .
+
+spm_cloud_providers:cpx62 a spm:ServerType ;
+    dcterms:title "CPX 62" ;
+    spm:serverTypeName "cpx62" ;
+    spm:serverTypeCategory "regular_purpose" ;
+    spm:serverTypeCores 16 ;
+    spm:serverTypeMemoryGB "32"^^xsd:decimal ;
+    spm:serverTypeDiskGB 640 ;
+    spm:serverTypeCpuType "shared" ;
+    spm:serverTypeArchitecture "x86" ;
+    spm:availableInRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerSin .
+
 spm_cloud_providers:Hetzner a spm:CloudProvider ;
     dcterms:title "Hetzner Cloud" ;
     dcterms:description "Hetzner Cloud provides virtual machines, networking, and storage for deploying applications in European, US, and Asia-Pacific data centers." ;
@@ -631,4 +819,5 @@ spm_cloud_providers:Hetzner a spm:CloudProvider ;
     spm:offersService spm_cloud_service:ComputeService, spm_cloud_service:StorageService ;
     spm:operatesInGeoRegion spm_geo_regions:Europe, spm_geo_regions:NorthAmerica, spm_geo_regions:Asia, spm_geo_regions:AsiaPacific ;
     spm:hasRegion spm_cloud_providers:hetznerFsn1, spm_cloud_providers:hetznerNbg1, spm_cloud_providers:hetznerHel1, spm_cloud_providers:hetznerAsh, spm_cloud_providers:hetznerHil, spm_cloud_providers:hetznerSin ;
-    spm:infrastructureHasConfigParameter spm:HetznerLocation .
+    spm:hasServerType spm_cloud_providers:cpx11, spm_cloud_providers:cpx21, spm_cloud_providers:cpx31, spm_cloud_providers:cpx41, spm_cloud_providers:cpx51, spm_cloud_providers:ccx13, spm_cloud_providers:ccx23, spm_cloud_providers:ccx33, spm_cloud_providers:ccx43, spm_cloud_providers:ccx53, spm_cloud_providers:ccx63, spm_cloud_providers:cpx12, spm_cloud_providers:cpx22, spm_cloud_providers:cpx32, spm_cloud_providers:cpx42, spm_cloud_providers:cpx52, spm_cloud_providers:cpx62 ;
+    spm:infrastructureHasConfigParameter spm:HetznerLocation, spm:ServerType .
