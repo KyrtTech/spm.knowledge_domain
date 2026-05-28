@@ -262,6 +262,57 @@ spm:hetznerLocationName a rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:comment "Hetzner Cloud API location name (e.g. fsn1, nbg1)." .
 
+spm:ServerType a rdfs:Class ;
+    rdfs:subClassOf spm:ConfigParameter ;
+    rdfs:label "Server type" ;
+    rdfs:comment "A provider-defined compute server or virtual-machine flavor that can be used when creating servers." .
+
+spm:serverTypeName a rdf:Property ;
+    rdfs:label "Server type id" ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Provider API server type or machine type identifier (e.g. cpx22, t3.medium, e2-standard-2)." .
+
+spm:serverTypeCategory a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Provider category for the server type." .
+
+spm:serverTypeCores a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Number of CPU cores in the server type." .
+
+spm:serverTypeMemoryGB a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Memory size in gigabytes for the server type." .
+
+spm:serverTypeDiskGB a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Local disk size in gigabytes for the server type." .
+
+spm:serverTypeCpuType a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:string ;
+    rdfs:comment "CPU allocation model for the server type, for example shared or dedicated." .
+
+spm:serverTypeArchitecture a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range xsd:string ;
+    rdfs:comment "CPU architecture for the server type." .
+
+spm:availableInRegion a rdf:Property ;
+    rdfs:domain spm:ServerType ;
+    rdfs:range spm:GeoRegion ;
+    rdfs:comment "Provider regions or locations where this server type is currently orderable." .
+
+spm:hasServerType a rdf:Property ;
+    rdfs:domain spm:CloudProvider ;
+    rdfs:range spm:ServerType ;
+    rdfs:comment "Server types offered by a cloud provider." .
+
 # Property for availability zone of the subnet
 spm:inAvailabilityZone a rdf:Property ;
     rdfs:domain spm:Subnet ;
