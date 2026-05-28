@@ -12,6 +12,10 @@ spm_apps:AWSCli a spm:SemanticVersioningApplication ;
     spm:hasSemanticVersion "2.0.0" ;
     dcterms:description "The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services." .
 
+spm_apps:HCloudCli a spm:SemanticVersioningApplication ;
+    dcterms:title "hcloud CLI" ;
+    dcterms:description "The Hetzner Cloud Command Line Interface is used to manage Hetzner Cloud resources." .
+
 spm_apps:Redis a spm:ApplicationFamily ;
     dcterms:title "Redis" ;
     schema:logo <https://upload.wikimedia.org/wikipedia/commons/e/ee/Redis_logo.svg> ;
