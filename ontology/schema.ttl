@@ -1,6 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix schema: <http://schema.org/> .
@@ -200,7 +201,7 @@ spm:operatesInGeoRegion a rdf:Property ;
 spm:GeoRegion a rdfs:Class ;
     rdfs:comment "Represents a broad geographic region, including continents and significant sub-regions within continents." .
 
-spm:regionName a rdf:Propery ;
+spm:regionName a rdf:Property ;
     rdfs:label "Region Name" ;
     rdfs:domain spm:GeoRegion ;
     rdfs:range xsd:string ;
@@ -514,3 +515,43 @@ spm:supportsApplication a rdf:Property ;
     rdfs:domain spm:Runner ;
     rdfs:range spm:SemanticVersioningApplication ;
     rdfs:comment "Indicates the semantic versioning applications that are installed or required on the runner." .
+
+# Single-valued properties: a subject has at most one value for each of these.
+# Properties not listed here may repeat (for example human-readable text once per language).
+# Enforced by scripts/validate.py; spm.registry stores these as scalar Neo4j properties.
+spm:hasSemanticVersion a owl:FunctionalProperty .
+spm:releaseDate a owl:FunctionalProperty .
+spm:endOfLifeDate a owl:FunctionalProperty .
+spm:minSemanticVersion a owl:FunctionalProperty .
+spm:maxSemanticVersion a owl:FunctionalProperty .
+spm:versionConstraint a owl:FunctionalProperty .
+spm:accessUrl a owl:FunctionalProperty .
+spm:localPath a owl:FunctionalProperty .
+spm:lockFileName a owl:FunctionalProperty .
+spm:dependencyFileName a owl:FunctionalProperty .
+spm:hasName a owl:FunctionalProperty .
+spm:regionName a owl:FunctionalProperty .
+spm:regionOptStatus a owl:FunctionalProperty .
+spm:awsRegionName a owl:FunctionalProperty .
+spm:gcpRegionName a owl:FunctionalProperty .
+spm:azureRegionName a owl:FunctionalProperty .
+spm:hetznerLocationName a owl:FunctionalProperty .
+spm:serverTypeName a owl:FunctionalProperty .
+spm:serverTypeCategory a owl:FunctionalProperty .
+spm:serverTypeCores a owl:FunctionalProperty .
+spm:serverTypeMemoryGB a owl:FunctionalProperty .
+spm:serverTypeDiskGB a owl:FunctionalProperty .
+spm:serverTypeCpuType a owl:FunctionalProperty .
+spm:serverTypeArchitecture a owl:FunctionalProperty .
+spm:inAvailabilityZone a owl:FunctionalProperty .
+spm:parameterName a owl:FunctionalProperty .
+spm:parameterValue a owl:FunctionalProperty .
+spm:parameterDescription a owl:FunctionalProperty .
+spm:defaultValue a owl:FunctionalProperty .
+spm:isFile a owl:FunctionalProperty .
+spm:isBuildable a owl:FunctionalProperty .
+spm:minValue a owl:FunctionalProperty .
+spm:recommendedValue a owl:FunctionalProperty .
+spm:argumentName a owl:FunctionalProperty .
+spm:argumentDescription a owl:FunctionalProperty .
+spm:downloadURL a owl:FunctionalProperty .
