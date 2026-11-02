@@ -2,20 +2,20 @@
 
 ## What
 
-SPM Knowldge Domain defines a technology-independent, RDF-based vocabulary and ontology for:
+SPM Knowledge Domain defines a technology-independent, RDF-based vocabulary and ontology for:
 - describing software services
     - their dependencies (usually other software services)
-    - minimum and recommended value for running it 
+    - minimum and recommended resource requirements
 - describing infrastructure providers and services
     - a common way of describing similar services between different providers
-- describe and discover strategies for installing software services on different infras
+- describe and discover strategies for installing software services on different infrastructure environments
 
 
 SPM leverages existing automation technologies (`Terraform`, `Pulumi`, `AWS CDK`, any other) for deployment by finding appropriate **install strategies**.
 
-SPM is not another automation tech but act more like an:
+SPM does not replace infrastructure automation tools; it complements them:
 - deployment orchestrator
-- deployment discovery 
+- deployment strategy discovery
 - it relies on existing infra tech for best practices and reproducible results
 
 ## How

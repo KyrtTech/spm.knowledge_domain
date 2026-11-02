@@ -391,7 +391,7 @@ The queries above are a readable version of what the rest of SPM does automatica
 
 - **`spm.registry`** loads this ontology into Neo4j. Its `find-install-plan` endpoint takes a service name and an infrastructure provider (for example `Kutt` and `AWS`). It follows `targetsApplication`, `dependsOnSemanticApp`, `dependsOnApplicationRequirement`, `requiresApplicationFamily` and `applicationBelongsToFamily`, and drops strategies bound to a different provider. This is the "identify" step.
 - **`spm.runner`** asks the registry for that plan and runs each strategy's scripts in a temporary directory. Each strategy's outputs (`producesParam`) are exported as environment variables in `SHOUTY_SNAKE_CASE` for the strategies after it, e.g. `sshConnectionString` becomes `SSH_CONNECTION_STRING`. Sizing values from `serviceHasDependencyParameter` are exported as `SPM_`-prefixed variables. This is the "deploy" step.
-- **`spm.turtle2rdf`** renders these same files as browsable HTML documentation.
+- **`spm.turtle2html`** renders these same files as browsable HTML documentation.
 
 ## Where each definition lives
 
