@@ -19,11 +19,11 @@ SPM is not another automation tech but act more like an:
 - it relies on existing infra tech for best practices and reproducible results
 
 ## How
-A foundational project unde `SPM` is defining the `vocabulary`, `taxonomies` and `ontologies` that are being used by other projects.
+A foundational project under `SPM` is defining the `vocabulary`, `taxonomies` and `ontologies` that are being used by other projects.
 
 There are a few reasons why this is useful:
 
-* have a common vocabulary when refering to different parts of a service
+* have a common vocabulary when referring to different parts of a service
     * infra req
     * inputs
     * outputs
@@ -66,7 +66,7 @@ You may also encounter `json-ld` files. The main rationale about using this is t
 
 We rely on existing and widely used and accepted `vocabularies` and `ontologies` where this seems to be appropriate.
 
-This is a growing list of external resources that are used accross this project.
+This is a growing list of external resources that are used across this project.
 
 ### Dublin Core
 
@@ -83,7 +83,7 @@ More precisely we are using the following namespaces
 
 Where appropriate we use the vocabulary provided by [schema.org](https://schema.org/).
 
-Where SEO is a goal schema.org is preferred, most likely in conjuction with [microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata).
+Where SEO is a goal schema.org is preferred, most likely in conjunction with [microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata).
 
 ### FriendOfAFriend (foaf)
 
