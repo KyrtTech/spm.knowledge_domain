@@ -1,5 +1,24 @@
 #  Service Package Manager - Knowledge Domain
 
+## What
+
+SPM Knowldge Domain defines a technology-independent, RDF-based vocabulary and ontology for:
+- describing software services
+    - their dependencies (usually other software services)
+    - minimum and recommended value for running it 
+- describing infrastructure providers and services
+    - a common way of describing similar services between different providers
+- describe and discover strategies for installing software services on different infras
+
+
+SPM leverages existing automation technologies (`Terraform`, `Pulumi`, `AWS CDK`, any other) for deployment by finding appropriate **install strategies**.
+
+SPM is not another automation tech but act more like an:
+- deployment orchestrator
+- deployment discovery 
+- it relies on existing infra tech for best practices and reproducible results
+
+## How
 A foundational project unde `SPM` is defining the `vocabulary`, `taxonomies` and `ontologies` that are being used by other projects.
 
 There are a few reasons why this is useful:
@@ -26,11 +45,11 @@ Most files related to describing the `vocabulary` and `ontology` are stored unde
 Most of the files are using `rdf` to describe the different `classes` and `properties`, but you may also encounter `json-ld` and `html` files.
 
 ### Docs
-Documentation will reside under the `doc` folder. This will discuss at length the different concepts used in this knowledge domain.
+Documentation will reside under the `docs` folder. This will discuss at length the different concepts used in this knowledge domain.
 
 ### Examples
 
-Under `/example` you can see examples. Examples are using multiple formats
+Under `/examples` you can see examples. Examples are using multiple formats
 - html
 - [turtle](https://www.w3.org/TR/turtle/)
 - [json-ld](https://json-ld.org/)
@@ -70,11 +89,16 @@ Where SEO is a goal schema.org is preferred, most likely in conjuction with [mic
 
 When describing creators, contributors or persons of interesest we mostly rely on [FoaF vocab](http://xmlns.com/foaf/spec/).
 
-### DataCatalogVocabulary (DCAT) - v2
+### DataCatalogVocabulary (DCAT) - v3
 We aren't using DCAT actively at this point, but this is a good resource if you ever need to describe a `data catalog`.
 
-V2 recommendation can be found [here](https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/).
+V3 recommendation can be found [here](https://www.w3.org/TR/vocab-dcat-3/).
 
-There is also a candidate recommendation for v3 [here](https://www.w3.org/TR/vocab-dcat-3/).
 
 > Note: this list is a living list and we may add other 3rd party vocabularies to it. 
+
+## License
+
+This project is licensed under the [Apache License, Version 2.0](LICENSE).
+
+Third-party vocabularies and ontologies referenced above remain under their own licenses.
