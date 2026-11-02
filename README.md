@@ -97,6 +97,25 @@ V3 recommendation can be found [here](https://www.w3.org/TR/vocab-dcat-3/).
 
 > Note: this list is a living list and we may add other 3rd party vocabularies to it. 
 
+## Single and multi-valued properties
+
+Each property either holds **one value per subject** or **may repeat**:
+
+- **Single-valued** properties are declared `owl:FunctionalProperty` at the end of [`ontology/schema.ttl`](ontology/schema.ttl). These are data such as versions, dates, identifiers, sizes and flags. Their values must not carry a language tag: write `spm:hasSemanticVersion "12.0"`, not `"12.0"@en`.
+- **Human-readable text** (`dcterms:title`, `dcterms:description`, `dcterms:alternative`, `schema:alternateName`, `rdfs:label`, `rdfs:comment`) may repeat, once per language, e.g. `dcterms:title "Node.js 18"@en, "Node.js 18"@ro`.
+- **Links to other resources** (`spm:requiresArgument`, `spm:hasRegion`, ...) may repeat freely; consumers such as `spm.registry` store them as relationships, not properties.
+
+When adding a new `spm:` data property, decide which kind it is and, if it is single-valued, add it to the `owl:FunctionalProperty` list.
+
+## Validation
+
+[`scripts/validate.py`](scripts/validate.py) checks that every file parses, that single-valued properties have at most one value per subject and no language tag, and that `xsd:` datatypes are spelled correctly. It runs in CI on every change under `ontology/`. To run it locally:
+
+```bash
+pip install rdflib
+python scripts/validate.py
+```
+
 ## License
 
 This project is licensed under the [Apache License, Version 2.0](LICENSE).
